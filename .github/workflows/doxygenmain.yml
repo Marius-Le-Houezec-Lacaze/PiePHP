@@ -10,9 +10,7 @@ jobs:
   build-documentation:
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    
+    steps:    
     # Build the HTML documentation
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
