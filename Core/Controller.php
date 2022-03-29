@@ -72,7 +72,7 @@ abstract class Controller
     }
 
     /**
-     * Render the view uppon controller destruction
+     * Render the passed view  inside index uppon controller destruction
      * 
      * @return void
      */
