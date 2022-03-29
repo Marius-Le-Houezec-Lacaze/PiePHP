@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build-documentation:
+    runs-on: ubuntu-latest            # Le runner, c'est à dire l'environnement sur lequel l'action va tourner, ça ne sert à rien d'y retoucher
+    
+    steps:     
+    - name: Doxygen Action
+      uses: mattnotmitt/doxygen-action@1.9.3
+      with:
+          working-directory: 'src/'
+          doxyfile-path: 'docs/Doxygen'
