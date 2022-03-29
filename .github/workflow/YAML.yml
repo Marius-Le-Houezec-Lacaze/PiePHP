@@ -1,0 +1,18 @@
+name: Mirroring
+on:                                   # Ici vous spécifiez la condition de déclenchement de l'action
+  push:                               # Lorsque vous faites un push sur la branche master
+    branches:                         # Bien sûr vous pouvez changer cette condition (action effectuée ou nom de la branche)
+      - main                          # Facile non ?
+jobs:                                 # Ici on dit ce qu'on doit faire
+  mirror:                             # On mirror (logique)
+    runs-on: ubuntu-latest            # Le runner, c'est à dire l'environnement sur lequel l'action va tourner, ça ne sert à rien d'y retoucher
+    steps:
+      - uses: actions/checkout@v2     # L'action que vous voulez utiliser en premier lieu -> d'abord on checkout
+        with:
+          fetch-depth: 0              # La fetch depth de 0 indique que vous allez récupérer l'intégralité des commits de votre dépôt, branches comprises. N'y touchez pas, au risque d'avoir des rejets de la part du dépôt cible.
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:            # Je ne vous fais pas un dessin
+            git@github.com:EpitechWebAcademiePromo2023/W-PHP-502-NAN-2-1-PiePHP-marius.le-houezec-lacaze.git
+          ssh_private_key:            #  Votre clé SSH privée. Générez-en une spécifiquement pour ça, n'allez pas compromettre votre clé privée "habituelle"
+            ${{ secrets.SSH_KEY }}    #  Notez que vous ne DEVEZ PAS directement indiquer votre clé SSH, vous devez passer par les Github Secrets (j'aborde ça juste après)
