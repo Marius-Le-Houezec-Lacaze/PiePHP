@@ -4,17 +4,18 @@ name: Documentation
 # events but only for the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-documentation:
     runs-on: ubuntu-latest
 
-    steps:    
-    # Build the HTML documentation
-    - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@v1.1.0
-      with:
-          doxyfile-path: ./Doxyfile
-          working-directory: .
-    
+    steps:
+      - uses: actions/checkout@v2
+
+      # Build the HTML documentation
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@v1.1.0
+        with:
+          doxyfile-path: "./Doxyfile"
+          working-directory: "."
