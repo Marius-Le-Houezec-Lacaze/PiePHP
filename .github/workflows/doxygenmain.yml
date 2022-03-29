@@ -1,15 +1,22 @@
+name: Documentation
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
 on:
   push:
-    branches:
-    - main
+    branches: [ main ]
 
 jobs:
   build-documentation:
-    runs-on: ubuntu-latest            # Le runner, c'est à dire l'environnement sur lequel l'action va tourner, ça ne sert à rien d'y retoucher
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
     
-    steps:     
+    # Build the HTML documentation
     - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@1.9.3
+      uses: mattnotmitt/doxygen-action@v1.1.0
       with:
-          working-directory: './Core/'
-          doxyfile-path: './docs/Doxygen'
+          doxyfile-path: ./docs/Doxyfile
+          working-directory: ./Core/
+    
