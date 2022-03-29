@@ -6,7 +6,9 @@ class Test extends Controller
 {
     public function get()
     {
-        $here = 'laurent le moche';
+        $get = $this->request->get();
+
+        $here = '$get->test';
 
         $this->render('test', compact('here'));
         //echo ('get');

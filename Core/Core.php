@@ -15,8 +15,7 @@ class Core
     {
         require 'src/routes.php';
 
-        $request = new Request();
-        $cont  = Router::getRoute($_SERVER['REQUEST_URI']);
+        $cont  = Router::getRoute(URI);
 
         if (!$cont) {
             echo '404';
@@ -27,7 +26,7 @@ class Core
 
         require_once 'src/Controller/' . ${'Controller'} . 'Controller.php';
 
-        $cont = new ${'Controller'}($request);
+        $cont = new ${'Controller'}();
 
 
 

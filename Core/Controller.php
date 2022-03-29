@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use Core\Request as Request;
+
 /**
  * Controller class, all user defined controller 
  * have to extend this class, is abstract so user 
@@ -20,14 +22,20 @@ abstract class Controller
      */
     static $_render;
 
+
     /**
-     * Pass the request Object to the controller
-     * 
-     * @param Request $request Request object 
+     * $request is the variable containing $_post,$_get,$_json, data
      */
-    public function __construct(
-        private Request $request,
-    ) {
+
+    protected $request;
+
+    /**
+     * Instanciate the request element for it 
+     * to be avalaible inside user declared controller
+     */
+    public function __construct()
+    {
+        $this->request = new Request();
     }
 
     /**

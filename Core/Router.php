@@ -138,6 +138,8 @@ class Router
         $value = [];
         if ($var = preg_match($pattern, $uri, $value)) {
             array_shift($value);
+            Request::setParams($value);
+            
             return true;
         }
         return false;
