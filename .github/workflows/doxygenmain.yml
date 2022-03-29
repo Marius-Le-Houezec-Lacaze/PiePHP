@@ -11,5 +11,5 @@ jobs:
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@1.9.3
       with:
-          working-directory: './src/'
+          working-directory: './Core/'
           doxyfile-path: './docs/Doxygen'
