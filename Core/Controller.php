@@ -3,6 +3,7 @@
 namespace Core;
 
 use Core\Request as Request;
+use TemplateEngine;
 
 /**
  * Controller class, all user defined controller 
@@ -66,7 +67,11 @@ abstract class Controller
 
         if (file_exists($f)) {
             ob_start();
-            include $f;
+            $template = new TemplateEngine($f);
+
+            $r = $template->getTemplatePath();
+
+            include $r;
             $view = ob_get_clean();
             ob_start();
 
@@ -74,6 +79,8 @@ abstract class Controller
                 DIRECTORY_SEPARATOR,
                 [dirname(__DIR__), 'src', 'View', 'index']
             ) . '.php';
+
+          
 
             self::$_render = ob_get_clean();
         }
