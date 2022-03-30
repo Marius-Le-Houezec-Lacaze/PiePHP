@@ -10,7 +10,8 @@ namespace Core;
  * Router::get('/hello', ['Controller' => 'Hello', 'action' => 'sayHello'] );
  * ```
  * The Core will then instanciate the Controller HelloController and call 
- * the declared action sayHello on it
+ * the declared action sayHello on it, you can also declare dynamix route with the 
+ * :id notation
  * 
  * @category Class
  * @author   Original Author <marius.le-houezec-lacaze@epitech.eu>
@@ -139,7 +140,7 @@ class Router
         if ($var = preg_match($pattern, $uri, $value)) {
             array_shift($value);
             Request::setParams($value);
-            
+
             return true;
         }
         return false;
