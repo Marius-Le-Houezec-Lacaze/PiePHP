@@ -1,0 +1,10 @@
+{
+    "database": {
+        "driver": "mysql",
+        "host": "localhost",
+        "port": "1010",
+        "password": "$PASSWORD",
+        "username": "$USERNAME",
+        "schema": "my_cinema"
+    }
+}
