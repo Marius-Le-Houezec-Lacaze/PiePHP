@@ -3,7 +3,7 @@
 namespace Core;
 
 use Core\Request as Request;
-use TemplateEngine;
+use Core\TemplateEngine as TemplateEngine;
 
 /**
  * Controller class, all user defined controller 
