@@ -1,7 +1,4 @@
 <?php
-
-use Controller\Controller;
-
 function my_autoloader($class)
 {
     $part = explode('\\', $class);
@@ -9,4 +6,3 @@ function my_autoloader($class)
 }
 
 spl_autoload_register('my_autoloader');
-//spl_autoload_register('controller_loader');

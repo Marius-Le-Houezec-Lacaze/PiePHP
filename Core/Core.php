@@ -28,8 +28,6 @@ class Core
 
         $cont = new ${'Controller'}();
 
-
-
         $cont->$action();
     }
 }
