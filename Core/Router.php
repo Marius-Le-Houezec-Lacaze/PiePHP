@@ -80,7 +80,7 @@ class Router
      *
      * @param string $route route to be processed
      * 
-     * @return string
+     * @return string 
      */
     private static function _processRoute(string $route): string
     {
