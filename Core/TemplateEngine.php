@@ -8,8 +8,14 @@ namespace Core;
  */
 class TemplateEngine
 {
+    /**
+     * MD5 signature of incoming template file
+     */
     private string $_signature;
 
+    /**
+     * Content of the template file
+     */
     private string $_content;
 
     /**
@@ -107,7 +113,7 @@ class TemplateEngine
      */
     private function _if(string $eval): string
     {
-        return "<?php if ($eval):?>";
+        return "<? if ($eval):?>";
     }
 
     /**
@@ -121,7 +127,7 @@ class TemplateEngine
     {
         [$full, $action] = $match;
 
-        return "<?php end$action;?>";
+        return "<? end$action;?>";
     }
 
     /**
@@ -136,4 +142,6 @@ class TemplateEngine
     {
         return "<?= htmlentities($val[1]) ?>";
     }
+
+    
 }
