@@ -5,7 +5,7 @@ use Core\Database;
 
 class Test extends Controller
 {
-    public function get()
+    public function get($id)
     {
         $get = $this->request->get();
 
@@ -21,7 +21,7 @@ class Test extends Controller
 
         $titles = $movie->fetchAll();
 
-        $this->render('test', compact('here', 'titles'));
+        $this->render('test', compact('here', 'id'));
         //echo ('get');
     }
 
