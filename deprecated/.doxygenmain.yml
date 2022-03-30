@@ -7,18 +7,3 @@ on:
     branches: [main]
 
 jobs:
-  build-documentation:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      # Build the HTML documentation
-      - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@v1.9.3
-        with:
-          doxyfile-path: "./Doxyfile"
-          working-directory: "."
-
-      - name: 'Add docs to repo'
-        uses: EndBug/add-and-commit@v9
