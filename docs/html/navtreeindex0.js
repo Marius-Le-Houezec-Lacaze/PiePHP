@@ -10,6 +10,8 @@ var NAVTREEINDEX0 =
 "classCore_1_1Core.html":[0,0,0,1],
 "classCore_1_1Core.html#a7a210c85a0a735fc227d87db5dcee687":[0,0,0,1,0],
 "classCore_1_1Database.html":[0,0,0,2],
+"classCore_1_1Database.html#aacdca22a1f2cbe4cbc8dc5ce6f44c294":[0,0,0,2,1],
+"classCore_1_1Database.html#abd9a6876476529d1fb4818e9c10ecf75":[0,0,0,2,0],
 "classCore_1_1Request.html":[0,0,0,3],
 "classCore_1_1Request.html#a2c3e8beccacddfa8fcc2940370362599":[0,0,0,3,4],
 "classCore_1_1Request.html#a42b01297c2823d5996e4c9985ded1adc":[0,0,0,3,8],
@@ -28,10 +30,9 @@ var NAVTREEINDEX0 =
 "classCore_1_1Router.html#aead8696d8119ce51558295349c19e736":[0,0,0,4,2],
 "classCore_1_1Router.html#aefafa539b45820517e5fa59958e75917":[0,0,0,4,5],
 "classes.html":[0,1],
-"functions.html":[0,3,0],
-"functions_func.html":[0,3,1],
-"functions_vars.html":[0,3,2],
-"hierarchy.html":[0,2],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"functions_vars.html":[0,2,2],
 "index.html":[],
 "pages.html":[]
 };
