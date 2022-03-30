@@ -68,7 +68,7 @@ class Request
      * 
      * @return array
      */
-    public function params(): array
+    static public function params(): array
     {
         return self::$_params;
     }

@@ -27,7 +27,6 @@ class Core
         require_once 'src/Controller/' . ${'Controller'} . 'Controller.php';
 
         $cont = new ${'Controller'}();
-
-        $cont->$action();
+        $cont->$action(...Request::params());
     }
 }
