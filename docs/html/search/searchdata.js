@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "$_cgprs",
-  1: "cr",
+  0: "$_cdgprs",
+  1: "cdr",
   2: "_cgprs",
   3: "$"
 };
