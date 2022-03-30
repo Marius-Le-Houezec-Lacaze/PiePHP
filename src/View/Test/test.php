@@ -1,2 +1,4 @@
 <h1>Hello world</h1>
-<?= $here ?>
+<?php foreach ($titles as $movie) { ?>
+    <?= $movie['title'] ?></br>
+<?php } ?>
