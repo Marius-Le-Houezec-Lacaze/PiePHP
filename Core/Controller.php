@@ -3,7 +3,11 @@
 namespace Core;
 
 use Core\Request as Request;
+<<<<<<< HEAD
 use TemplateEngine;
+=======
+use Core\TemplateEngine as TemplateEngine;
+>>>>>>> main
 
 /**
  * Controller class, all user defined controller 

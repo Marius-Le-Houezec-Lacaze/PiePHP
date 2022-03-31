@@ -1,24 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "$_cgprs",
-  1: "cr",
-  2: "_cgprs",
-  3: "$"
+  0: "$_acdegmoprst",
+  1: "cdrt",
+  2: "c",
+  3: "acdeort",
+  4: "_cgmprs",
+  5: "$"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions",
-  3: "variables"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Functions",
-  3: "Variables"
+  2: "Namespaces",
+  3: "Files",
+  4: "Functions",
+  5: "Variables"
 };
 

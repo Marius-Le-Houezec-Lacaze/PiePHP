@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['get_0',['get',['../classCore_1_1Request.html#a7f24ff8250b37707cb0458a2dd85a9a8',1,'Core\Request\get()'],['../classCore_1_1Router.html#a425014844958cd71b854b9a6b600657c',1,'Core\Router\get(string $url, array $controller)']]],
-  ['getroute_1',['getRoute',['../classCore_1_1Router.html#ac87a2d798c722f07b802e9b85d2ba6cb',1,'Core::Router']]]
+  ['connect_20',['connect',['../classCore_1_1Router.html#aead8696d8119ce51558295349c19e736',1,'Core::Router']]],
+  ['controller_21',['Controller',['../classCore_1_1Controller.html',1,'Core']]],
+  ['controller_2ephp_22',['Controller.php',['../Controller_8php.html',1,'']]],
+  ['core_23',['Core',['../namespaceCore.html',1,'Core'],['../classCore_1_1Core.html',1,'Core\Core']]],
+  ['core_2ephp_24',['Core.php',['../Core_8php.html',1,'']]]
 ];

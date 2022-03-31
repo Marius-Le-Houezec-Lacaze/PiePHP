@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['setparams_0',['setParams',['../classCore_1_1Request.html#a45ad4f96b4515caa5b9d94da2bccf018',1,'Core::Request']]]
+  ['render_79',['render',['../classCore_1_1Controller.html#a79b9776a35dcc2171fa00c614079ea7a',1,'Core::Controller']]],
+  ['run_80',['run',['../classCore_1_1Core.html#a7a210c85a0a735fc227d87db5dcee687',1,'Core::Core']]]
 ];
