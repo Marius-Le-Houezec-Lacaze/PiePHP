@@ -142,6 +142,4 @@ class TemplateEngine
     {
         return "<?= htmlentities($val[1]) ?>";
     }
-
-    
 }
