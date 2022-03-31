@@ -5,23 +5,23 @@ use Core\Database;
 
 class Test extends Controller
 {
-    public function get($id)
+    public function get()
     {
         $get = $this->request->get();
 
         $here = '$get->test';
 
-        //$db = Database::getInstance();
+        $db = Database::getInstance();
         //new PDO('mysql:host=127.0.0.1;dbname=cinema;charset=utf8', 'user', 'password');
 
         //write pdo
 
-        //$movie = $db->prepare('SELECT title FROM movie');
-        //$movie->execute();
+        $movie = $db->prepare('SELECT title FROM movie');
+        $movie->execute();
 
-        //$titles = $movie->fetchAll();
+        $titles = $movie->fetchAll();
 
-        $this->render('test', compact('here', 'id'));
+        $this->render('test', compact('here', 'titles'));
         //echo ('get');
     }
 
