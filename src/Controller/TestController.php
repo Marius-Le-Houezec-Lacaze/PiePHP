@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Core\Database as Database;
+use Core\ORM as ORM;
 
 
 class TestController extends \Core\Controller
@@ -10,29 +11,26 @@ class TestController extends \Core\Controller
     public function index()
     {
 
-        $db = Database::getInstance();
+        $orm = new ORM();
 
-        $movie = $db->prepare('SELECT title, id FROM movie');
-        $movie->execute();
-
-        $movies = $movie->fetchAll();
+        $movies = $orm
+            ->from('movie')
+            ->select('title', 'id', 'duration')
+            ->query();
 
         $this->render('test', compact('movies'));
-        //echo ('get');
     }
 
     public function movie($id)
     {
-        $db = Database::getInstance();
+        $orm = new ORM();
 
-        $movie = $db->prepare('SELECT * FROM movie WHERE id = :id LIMIT 1');
-        $movie->execute(
-            ['id' => $id]
-        );
-
-        $movie = $movie->fetch();
+        $movie = $orm
+            ->from('movie')
+            ->select('duration', 'id', 'title', 'director')
+            ->where('id', $id)
+            ->query();
 
         $this->render('movie', compact('movie'));
-
     }
 }
