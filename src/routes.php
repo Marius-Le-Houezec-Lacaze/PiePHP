@@ -4,5 +4,5 @@ use Core\Router as Router;
 
 
 
-Router::connect('/echo', ['Controller' => 'Test', 'action' => 'get']);
-//Router::post('/echo', ['Controller' => 'Test', 'action' => 'post']);
+Router::get('/movies', ['Controller' => 'Test', 'action' => 'index']);
+Router::get('/movie/:id', ['Controller' => 'Test', 'action' => 'movie']);

@@ -24,9 +24,11 @@ class Core
 
         extract($cont);
 
-        require_once 'src/Controller/' . ${'Controller'} . 'Controller.php';
+        //require_once 'src/Controller/' . ${'Controller'} . 'Controller.php';
+    
+        $cont = new ("Controller\\" . ${'Controller'} . 'Controller')();
 
-        $cont = new ${'Controller'}();
+        
         $cont->$action(...Request::params());
     }
 }

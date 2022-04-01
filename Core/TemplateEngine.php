@@ -23,20 +23,30 @@ class TemplateEngine
      */
     private string $_cache_path;
 
+
+    /**
+     * Contain instruction for _special end statement
+     */
+    private array $_special = ['endempty' => 'endif', 'endisset' => 'endif'];
+
     /**
      * Assign the variable and hash the md5 of the file for verification
      * uppon rechecking
      *
      * @return string $path path of the template to be processed
      */
-    public function __construct(private string $path)
-    {
+    public function __construct(
+        private string $path
+    ) {
         $this->_signature = md5_file($path);
         $this->_content = file_get_contents($path);
-        $this->_cache_path = implode(DIRECTORY_SEPARATOR, [
-            ".cache",
-            $this->_signature . ".php",
-        ]);
+        $this->_cache_path = implode(
+            DIRECTORY_SEPARATOR,
+            [
+                ".cache",
+                $this->_signature . ".php",
+            ]
+        );
     }
 
     /**
@@ -48,8 +58,8 @@ class TemplateEngine
     private function _parseFile(): int|false
     {
         $pattern = "/@(.*)\((.*)\)/";
-        $end = "/@end(.*)/";
-        $echo = "/{{(.*)}}/";
+        $end = "/@(.*)/";
+        $echo = "/{{(.*?)}}/";
 
         /// {{ }}
         $this->_content = preg_replace_callback(
@@ -101,7 +111,7 @@ class TemplateEngine
     {
         [$full, $action, $eval] = $match;
 
-        return $this->{"_" . $action}($eval);
+        return $this->{"_" . trim($action)}($eval);
     }
 
     /**
@@ -117,6 +127,18 @@ class TemplateEngine
     }
 
     /**
+     * Replace @foreach with actual foreach statement for templating
+     * 
+     * @param string $eval evaluation to be put in foreach statement
+     * 
+     * @return string
+     */
+    private function _foreach(string $eval): string
+    {
+        return "<? foreach($eval):?>";
+    }
+
+    /**
      * Replace @end(action) with appropiate terminal in if/else/foreach ect..
      *
      * @param array $match the array containing action to be appended on @end
@@ -127,7 +149,36 @@ class TemplateEngine
     {
         [$full, $action] = $match;
 
-        return "<? end$action;?>";
+        if (isset($this->_special[$action])) {
+            $action = $this->_special[$action];
+        }
+
+        return "<? $action;?>";
+    }
+
+    /**
+     * Replace @empty(action) with appropriate php statement
+     * 
+     * @param string $eval evaluation to be puit in the php statement
+     * 
+     * @return string
+     */
+    private function _empty(string $eval): string
+    {
+        return "<? if(empty($eval)):?>";
+    }
+
+
+    /**
+     * Replace @isset(action) with appropriate php statement
+     * 
+     * @param string $eval evaluation to be puit in the php statement
+     * 
+     * @return string
+     */
+    private function _isset(string $eval): string
+    {
+        return "<? if(isset($eval)):?>";
     }
 
     /**
@@ -141,5 +192,19 @@ class TemplateEngine
     private function _echo(array $val): string
     {
         return "<?= htmlentities($val[1]) ?>";
+    }
+
+    /**
+     * Handle when an unknown template action is called 
+     * and display an error message, also avoid the template to be cached
+     * 
+     * @param string $name      the name of the unknow function called
+     * @param array  $arguments the arguments sent to the unknow function
+     * 
+     * @return void
+     */
+    public function __call(string $name, array $arguments)
+    {
+        Error::templateError("Fatal templating error unknown argument $name");
     }
 }
