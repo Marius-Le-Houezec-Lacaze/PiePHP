@@ -8,5 +8,6 @@ var searchData=
   ['_24_5fpost_5',['$_post',['../classCore_1_1Request.html#a42b01297c2823d5996e4c9985ded1adc',1,'Core\Request\$_post()'],['../classCore_1_1Router.html#a8c133daf3a04987ac22aac138f1af7bc',1,'Core\Router\$_post()']]],
   ['_24_5frender_6',['$_render',['../classCore_1_1Controller.html#a394dc1f3e2cf324fc53efb31718a6d7f',1,'Core::Controller']]],
   ['_24_5fsignature_7',['$_signature',['../classCore_1_1TemplateEngine.html#a56dfad9f107ad60e85a0a7af2be29071',1,'Core::TemplateEngine']]],
-  ['_24request_8',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]]
+  ['_24_5fspecial_8',['$_special',['../classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd',1,'Core::TemplateEngine']]],
+  ['_24request_9',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]]
 ];

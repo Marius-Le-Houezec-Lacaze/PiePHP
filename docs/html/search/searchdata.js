@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
   0: "$_acdegmoprst",
-  1: "cdrt",
+  1: "cdert",
   2: "c",
   3: "acdeort",
-  4: "_cgmprs",
+  4: "_cgmprst",
   5: "$"
 };
 
