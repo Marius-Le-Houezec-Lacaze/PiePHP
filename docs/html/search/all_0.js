@@ -9,5 +9,9 @@ var searchData=
   ['_24_5frender_6',['$_render',['../classCore_1_1Controller.html#a394dc1f3e2cf324fc53efb31718a6d7f',1,'Core::Controller']]],
   ['_24_5fsignature_7',['$_signature',['../classCore_1_1TemplateEngine.html#a56dfad9f107ad60e85a0a7af2be29071',1,'Core::TemplateEngine']]],
   ['_24_5fspecial_8',['$_special',['../classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd',1,'Core::TemplateEngine']]],
-  ['_24request_9',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]]
+  ['_24from_9',['$from',['../classCore_1_1ORM.html#a057ad1153d539b008f4962be303f82fd',1,'Core::ORM']]],
+  ['_24request_10',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]],
+  ['_24select_11',['$select',['../classCore_1_1ORM.html#ae0baacaa4df5cfe49d05d0e658618216',1,'Core::ORM']]],
+  ['_24statement_12',['$statement',['../classCore_1_1ORM.html#abafe293f688226259dd57e6d36bc34bd',1,'Core::ORM']]],
+  ['_24where_13',['$where',['../classCore_1_1ORM.html#ad799e6dbfbab5d3cec781fafe2d26f44',1,'Core::ORM']]]
 ];
