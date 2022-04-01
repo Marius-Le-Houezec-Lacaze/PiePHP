@@ -2,32 +2,37 @@
 
 namespace Controller;
 
+use Core\Database as Database;
+
+
 class TestController extends \Core\Controller
 {
-    public function get($id)
+    public function index()
     {
-        //echo('here');
-        $get = $this->request->get();
 
-        $here = '$get->test';
-        $array = [0, 1, 2, 3];
+        $db = Database::getInstance();
 
-        //$db = Database::getInstance();
-        //new PDO('mysql:host=127.0.0.1;dbname=cinema;charset=utf8', 'user', 'password');
+        $movie = $db->prepare('SELECT title, id FROM movie');
+        $movie->execute();
 
-        //write pdo
+        $movies = $movie->fetchAll();
 
-        //$movie = $db->prepare('SELECT title FROM movie');
-        //$movie->execute();
-
-        //$titles = $movie->fetchAll();
-
-        $this->render('test', compact('here', 'id', 'array'));
+        $this->render('test', compact('movies'));
         //echo ('get');
     }
 
-    public function post()
+    public function movie($id)
     {
-        echo ('post');
+        $db = Database::getInstance();
+
+        $movie = $db->prepare('SELECT * FROM movie WHERE id = :id LIMIT 1');
+        $movie->execute(
+            ['id' => $id]
+        );
+
+        $movie = $movie->fetch();
+
+        $this->render('movie', compact('movie'));
+
     }
 }

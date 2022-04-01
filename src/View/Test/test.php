@@ -1,14 +1,7 @@
-<h1>Hello world ma</h1>
-
-@if(true)
-{{ $id }}
-@endif
 
 
-@foreach ($array as $number )
-    {{ $number }} <br>
+@foreach ( $movies as $movie)
+
+    {{ $movie['title'] }} <a href='{{ '/movie/' . $movie['id'] }}'>page</a><br>
+
 @endforeach
-
-@empty($array)
-    {{ 'empty' }}
-@endempty

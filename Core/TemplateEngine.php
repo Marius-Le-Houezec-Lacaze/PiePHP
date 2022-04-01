@@ -59,7 +59,7 @@ class TemplateEngine
     {
         $pattern = "/@(.*)\((.*)\)/";
         $end = "/@(.*)/";
-        $echo = "/{{(.*)}}/";
+        $echo = "/{{(.*?)}}/";
 
         /// {{ }}
         $this->_content = preg_replace_callback(

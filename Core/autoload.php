@@ -1,14 +1,24 @@
 <?php
-function my_autoloader($class)
+
+/**
+ * Auto loader for Controller Core and Model
+ * 
+ * @param string $class name of the class to be loaded
+ */
+function my_autoloader(string $class)
 {
-    //var_dump($class);
     $part = explode('\\', $class);
+
     if ($part[0] == 'Core') {
-        include './Core/' . end($part) . '.php';
+        include implode(DIRECTORY_SEPARATOR, ['Core', end($part) . '.php']);
     }
 
     if ($part[0] == 'Controller') {
-        include './src/Controller/' . end($part) . '.php';
+        include implode(DIRECTORY_SEPARATOR, ['src', 'Controller', end($part) . '.php']);
+    }
+
+    if ($part[0] == 'Model') {
+        include implode(DIRECTORY_SEPARATOR, ['src', 'Model', end($part) . '.php']);
     }
 }
 

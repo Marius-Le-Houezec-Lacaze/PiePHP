@@ -28,6 +28,7 @@ class Core
     
         $cont = new ("Controller\\" . ${'Controller'} . 'Controller')();
 
+        
         $cont->$action(...Request::params());
     }
 }

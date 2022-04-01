@@ -105,6 +105,7 @@ class Router
      *  */
     public static function getRoute(string $uri): false|array
     {
+
         if (METHOD == 'GET') {
             foreach (self::$_get as $pattern => $controller) {
                 $match = self::_checkMatch($pattern, $uri);
