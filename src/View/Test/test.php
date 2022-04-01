@@ -3,3 +3,12 @@
 @if(true)
 {{ $id }}
 @endif
+
+
+@foreach ($array as $number )
+    {{ $number }} <br>
+@endforeach
+
+@empty($array)
+    {{ 'empty' }}
+@endempty

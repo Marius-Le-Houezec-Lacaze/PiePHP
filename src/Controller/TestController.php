@@ -1,15 +1,16 @@
 <?php
 
-use \Core\Controller as Controller;
-use Core\Database;
+namespace Controller;
 
-class Test extends Controller
+class TestController extends \Core\Controller
 {
     public function get($id)
     {
+        //echo('here');
         $get = $this->request->get();
 
         $here = '$get->test';
+        $array = [0, 1, 2, 3];
 
         //$db = Database::getInstance();
         //new PDO('mysql:host=127.0.0.1;dbname=cinema;charset=utf8', 'user', 'password');
@@ -21,7 +22,7 @@ class Test extends Controller
 
         //$titles = $movie->fetchAll();
 
-        $this->render('test', compact('here', 'id'));
+        $this->render('test', compact('here', 'id', 'array'));
         //echo ('get');
     }
 
