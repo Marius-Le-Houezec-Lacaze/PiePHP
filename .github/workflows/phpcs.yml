@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          working-directory: "./Core"
           fetch-depth: 0 # important!
 
       # we may use whatever way to install phpcs, just specify the path on the next step
