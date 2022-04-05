@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['query_0',['query',['../classCore_1_1ORM.html#a7f7e3d7028c22aa5f935445f7f3e02b6',1,'Core::ORM']]]
+  ['orm_0',['ORM',['../classCore_1_1ORM.html',1,'Core']]],
+  ['orm_2ephp_1',['ORM.php',['../ORM_8php.html',1,'']]]
 ];

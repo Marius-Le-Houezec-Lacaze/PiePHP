@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['get_0',['get',['../classCore_1_1Request.html#a7f24ff8250b37707cb0458a2dd85a9a8',1,'Core\Request\get()'],['../classCore_1_1Router.html#a425014844958cd71b854b9a6b600657c',1,'Core\Router\get()']]],
-  ['getinstance_1',['getInstance',['../classCore_1_1Database.html#abd9a6876476529d1fb4818e9c10ecf75',1,'Core::Database']]],
-  ['getroute_2',['getRoute',['../classCore_1_1Router.html#ac87a2d798c722f07b802e9b85d2ba6cb',1,'Core::Router']]],
-  ['gettemplatepath_3',['getTemplatePath',['../classCore_1_1TemplateEngine.html#a2996d842e24257ed2cd2e9e78688afe3',1,'Core::TemplateEngine']]]
+  ['fetch_0',['fetch',['../classCore_1_1ORM.html#ad85fa395a0b5d582327f26389fb85a06',1,'Core::ORM']]]
 ];

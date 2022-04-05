@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['select_0',['select',['../classCore_1_1ORM.html#a0fe483fce8a548c950790ba588bea227',1,'Core::ORM']]],
-  ['setparams_1',['setParams',['../classCore_1_1Request.html#a45ad4f96b4515caa5b9d94da2bccf018',1,'Core::Request']]]
+  ['params_0',['params',['../classCore_1_1Request.html#ae7ac3d594c4e5958f2ec5dc22eb9c201',1,'Core::Request']]],
+  ['post_1',['post',['../classCore_1_1Request.html#a2c3e8beccacddfa8fcc2940370362599',1,'Core\Request\post()'],['../classCore_1_1Router.html#aefafa539b45820517e5fa59958e75917',1,'Core\Router\post()']]]
 ];

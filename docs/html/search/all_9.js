@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['orm_0',['ORM',['../classCore_1_1ORM.html',1,'Core']]],
-  ['orm_2ephp_1',['ORM.php',['../ORM_8php.html',1,'']]]
+  ['limit_0',['limit',['../classCore_1_1ORM.html#aa987417aa87c9c02d058da1636a61e33',1,'Core::ORM']]]
 ];
