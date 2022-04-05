@@ -6,13 +6,13 @@ use Core\Request as Request;
 use Core\TemplateEngine as TemplateEngine;
 
 /**
- * Controller class, all user defined controller 
- * have to extend this class, is abstract so user 
- * cannot and should not instanciate it . 
- * 
+ * Controller class, all user defined controller
+ * have to extend this class, is abstract so user
+ * cannot and should not instanciate it .
+ *
  * @category Class
  * @author   Original Author <marius.le-houezec-lacaze@epitech.eu>
- * @license  Do whatever the hell you want with it license 
+ * @license  Do whatever the hell you want with it license
  * @link     https://github.com/EpitechWebAcademiePromo2023/W-PHP-502-NAN-2-1-PiePHP-marius.le-houezec-lacaze
  */
 abstract class Controller
@@ -31,7 +31,7 @@ abstract class Controller
     protected $request;
 
     /**
-     * Instanciate the request element for it 
+     * Instanciate the request element for it
      * to be avalaible inside user declared controller
      */
     public function __construct()
@@ -42,10 +42,10 @@ abstract class Controller
     /**
      * Send the variable contained in $scope to $view
      * and set generated content inside $_render;
-     * 
+     *
      * @param string $view  the name of the view to be rendered
      * @param array  $scope the array containing variable name and their value
-     * 
+     *
      * @return void
      */
     protected function render(string $view, array $scope = []): void
@@ -91,7 +91,7 @@ abstract class Controller
 
     /**
      * Render the passed view  inside index uppon controller destruction
-     * 
+     *
      * @return void
      */
     function __destruct()

@@ -128,9 +128,9 @@ class TemplateEngine
 
     /**
      * Replace @foreach with actual foreach statement for templating
-     * 
+     *
      * @param string $eval evaluation to be put in foreach statement
-     * 
+     *
      * @return string
      */
     private function _foreach(string $eval): string
@@ -158,9 +158,9 @@ class TemplateEngine
 
     /**
      * Replace @empty(action) with appropriate php statement
-     * 
+     *
      * @param string $eval evaluation to be puit in the php statement
-     * 
+     *
      * @return string
      */
     private function _empty(string $eval): string
@@ -171,9 +171,9 @@ class TemplateEngine
 
     /**
      * Replace @isset(action) with appropriate php statement
-     * 
+     *
      * @param string $eval evaluation to be puit in the php statement
-     * 
+     *
      * @return string
      */
     private function _isset(string $eval): string
@@ -195,12 +195,12 @@ class TemplateEngine
     }
 
     /**
-     * Handle when an unknown template action is called 
+     * Handle when an unknown template action is called
      * and display an error message, also avoid the template to be cached
-     * 
+     *
      * @param string $name      the name of the unknow function called
      * @param array  $arguments the arguments sent to the unknow function
-     * 
+     *
      * @return void
      */
     public function __call(string $name, array $arguments)

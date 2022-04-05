@@ -17,7 +17,7 @@ class ORM
     private string $_table;
 
     /**
-     * Database that will be used in orm instance 
+     * Database that will be used in orm instance
      */
     private \PDO $_db;
 
@@ -44,8 +44,8 @@ class ORM
 
     /**
      * Construct for ORM take the PDO of a database in parameter
-     * 
-     * @param \PDO $db the database to be used for query     * 
+     *
+     * @param \PDO $db the database to be used for query     *
      */
     function __construct(\PDO $db)
     {
@@ -56,9 +56,9 @@ class ORM
 
     /**
      * Setter for the table that will be used in all futur sql query
-     * 
+     *
      * @param string $table the table to be used
-     * 
+     *
      * @return ORM the reference of this object
      */
     public function table(string $table): ORM
@@ -70,9 +70,9 @@ class ORM
 
     /**
      * Fill the select field in the sql query
-     * 
+     *
      * @param mixed ...$params take multiple params and return the selection
-     * 
+     *
      * @return ORM the reference of this object
      */
     public function select(...$params): ORM
@@ -84,9 +84,9 @@ class ORM
 
     /**
      * Setter for where condition in sql SELECT
-     * 
+     *
      * @param string $condition any valid sql condition (=,LIKE,ect...)
-     * 
+     *
      * @return ORM
      */
     public function where(string $condition): ORM
@@ -98,9 +98,9 @@ class ORM
 
     /**
      * Limit the number of result in the sql query
-     * 
+     *
      * @param int $limit number of result sent
-     * 
+     *
      * @return ORM the reference of this object
      */
     public function limit(int $limit): ORM
@@ -112,7 +112,7 @@ class ORM
 
     /**
      * Build the SELECT query  for execution
-     * 
+     *
      * @return void
      */
     private function _prepareSelect()
@@ -126,7 +126,7 @@ class ORM
 
     /**
      * Executed SELECT sql statement
-     * 
+     *
      * @return array
      */
     public function fetch()
@@ -145,7 +145,7 @@ class ORM
 
     /**
      * Prepare WHERE statement for sql query add the appropriate AND ect..
-     * 
+     *
      * @return void
      */
     private function _setWhere()
@@ -175,7 +175,7 @@ class ORM
 
     /**
      * Execute the DELETE statement
-     * 
+     *
      * @return void
      */
     public function delete()
@@ -191,10 +191,10 @@ class ORM
 
     /**
      * Prepare and execute sql statement for INSERT directive
-     * 
-     * @param array $array_params the parametter to be 
+     *
+     * @param array $array_params the parametter to be
      *                            inserted inside the sql statement
-     * 
+     *
      * @return bool
      */
     public function insert(array $array_params): bool
@@ -219,10 +219,10 @@ class ORM
 
     /**
      * Update the entry with the params passed in parametter
-     * 
-     * @param array $array_params the params passed in parameter in 
+     *
+     * @param array $array_params the params passed in parameter in
      *                            the form of a 2 dimensionnal array
-     * 
+     *
      * @return bool
      */
     public function update(array $array_params): bool

@@ -2,7 +2,7 @@
 
 /**
  * Auto loader for Controller Core and Model
- * 
+ *
  * @param string $class name of the class to be loaded
  */
 function my_autoloader(string $class)

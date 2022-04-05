@@ -7,14 +7,14 @@ use PDO;
 class Database
 {
     /**
-     * Contain the single pdo instance 
+     * Contain the single pdo instance
      */
     private static $_instance = null;
 
     /**
      * Return the static instance representing the database
-     * 
-     * @return PDO 
+     *
+     * @return PDO
      */
     static function getInstance()
     {

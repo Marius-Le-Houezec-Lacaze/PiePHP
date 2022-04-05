@@ -4,18 +4,18 @@ namespace Core;
 
 /**
  * ## Declaring a new route
- * 
+ *
  * To declare a simple new get route you can just do it in your src/routes.php file:
  * ```
  * Router::get('/hello', ['Controller' => 'Hello', 'action' => 'sayHello'] );
  * ```
- * The Core will then instanciate the Controller HelloController and call 
- * the declared action sayHello on it, you can also declare dynamix route with the 
+ * The Core will then instanciate the Controller HelloController and call
+ * the declared action sayHello on it, you can also declare dynamix route with the
  * :id notation
- * 
+ *
  * @category Class
  * @author   Original Author <marius.le-houezec-lacaze@epitech.eu>
- * @license  Do whatever the hell you want with it license 
+ * @license  Do whatever the hell you want with it license
  * @link     https://github.com/EpitechWebAcademiePromo2023/W-PHP-502-NAN-2-1-PiePHP-marius.le-houezec-lacaze
  */
 class Router
@@ -27,12 +27,12 @@ class Router
     private static $_get = [];
 
     /**
-     * Register a route that will both trigger 
+     * Register a route that will both trigger
      * no matter if the request is POST or GET
-     * 
+     *
      * @param string $url        url must use :var notation for dynamic link variable
      * @param array  $controller array containing action and controller
-     * 
+     *
      * @return void
      */
     public static function connect(string $url, array $controller): void
@@ -50,7 +50,7 @@ class Router
      *
      * @param string $url        url must use /:var notation for dynamic variable
      * @param array  $controller array containing action and controller
-     * 
+     *
      * @return void
      */
     public static function get(string $url, array $controller): void
@@ -65,7 +65,7 @@ class Router
      *
      * @param string $url        url must use /:var notation for dynamic variable
      * @param array  $controller array containing action and controller
-     * 
+     *
      * @return void
      */
     public static function post(string $url, array $controller): void
@@ -79,8 +79,8 @@ class Router
      * it has key for the checkMatch()
      *
      * @param string $route route to be processed
-     * 
-     * @return string 
+     *
+     * @return string
      */
     private static function _processRoute(string $route): string
     {
@@ -96,12 +96,12 @@ class Router
 
     /**
      * Check if the uri passed inside has been declared has a route
-     * Return either a bool(false) or an assiociative array containing 
+     * Return either a bool(false) or an assiociative array containing
      * matching controller its actions
-     * 
+     *
      * @param string $uri is the the current path to be checked
-     * 
-     * @return false|array return either false or an associative array 
+     *
+     * @return false|array return either false or an associative array
      *  */
     public static function getRoute(string $uri): false|array
     {
@@ -128,11 +128,11 @@ class Router
     }
 
     /**
-     * This function check if the passed pattern and uri match 
-     * 
+     * This function check if the passed pattern and uri match
+     *
      * @param string $pattern is a string regex of the uri
      * @param string $uri     is the uri to be checked
-     * 
+     *
      * @return bool representing if the uri match or not
      */
     private static function _checkMatch(string $pattern, string $uri): bool

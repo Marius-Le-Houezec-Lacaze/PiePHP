@@ -20,11 +20,11 @@ class Request
     /**
      * Array containing params value
      */
-    static private $_params = [];
+    private static $_params = [];
 
     /**
-     * Parse and popuplate both $_get and $_post 
-     * 
+     * Parse and popuplate both $_get and $_post
+     *
      * @return void
      */
     public function __construct()
@@ -44,7 +44,7 @@ class Request
 
     /**
      * Getter for $_get
-     * 
+     *
      * @return stdClass
      */
     public function get(): stdClass
@@ -54,7 +54,7 @@ class Request
 
     /**
      * Getter for $_post
-     * 
+     *
      * @return stdClass
      */
     public function post(): stdClass
@@ -65,22 +65,22 @@ class Request
 
     /**
      * Getter for url params
-     * 
+     *
      * @return array
      */
-    static public function params(): array
+    public static function params(): array
     {
         return self::$_params;
     }
 
     /**
-     * Used to set the $_param value inside Core/Route 
-     * 
+     * Used to set the $_param value inside Core/Route
+     *
      * @param array $params Array containing all inline url value
-     * 
+     *
      * @return void
      */
-    static public function setParams(array $params): void
+    public static function setParams(array $params): void
     {
         self::$_params = $params;
     }
@@ -88,9 +88,9 @@ class Request
     /**
      * Take the passed paramet $input and make it safe to display in html
      * trim, escape character, ect..
-     * 
+     *
      * @param string $input the input variable that need to be secure
-     * 
+     *
      * @return string
      */
     private function _secureInput(string $input): string
