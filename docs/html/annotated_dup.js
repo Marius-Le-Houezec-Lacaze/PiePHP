@@ -9,5 +9,6 @@ var annotated_dup =
       [ "Request", "classCore_1_1Request.html", "classCore_1_1Request" ],
       [ "Router", "classCore_1_1Router.html", "classCore_1_1Router" ],
       [ "TemplateEngine", "classCore_1_1TemplateEngine.html", "classCore_1_1TemplateEngine" ]
-    ] ]
+    ] ],
+    [ "Entity", "classEntity.html", "classEntity" ]
 ];

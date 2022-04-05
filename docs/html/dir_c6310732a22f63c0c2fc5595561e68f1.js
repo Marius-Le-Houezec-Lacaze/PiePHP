@@ -11,7 +11,9 @@ var dir_c6310732a22f63c0c2fc5595561e68f1 =
     [ "Database.php", "Database_8php.html", [
       [ "Core\\Database", "classCore_1_1Database.html", "classCore_1_1Database" ]
     ] ],
-    [ "Entity.php", "Entity_8php.html", null ],
+    [ "Entity.php", "Entity_8php.html", [
+      [ "Entity", "classEntity.html", "classEntity" ]
+    ] ],
     [ "Error.php", "Error_8php.html", [
       [ "Core\\Error", "classCore_1_1Error.html", "classCore_1_1Error" ]
     ] ],
