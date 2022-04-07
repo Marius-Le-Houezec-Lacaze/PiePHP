@@ -24,6 +24,9 @@ abstract class Entity
         $this->table_key = array_flip(array_keys($data));
     }
 
+    /**
+     * Remove entry from database
+     */
     public function delete()
     {
         $orm = new ORM(Database::getInstance());
@@ -32,7 +35,7 @@ abstract class Entity
             return;
         }
 
-        $orm->table($this->table_name)
+        return $orm->table($this->table_name)
             ->where("id = $this->id")
             ->delete();
     }
