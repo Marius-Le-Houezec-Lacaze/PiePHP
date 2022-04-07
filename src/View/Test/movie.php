@@ -1,9 +1,4 @@
-@empty(!$movie[0])
-{{ $movie[0]['title'] }} <br>
-{{ $movie[0]['director'] }} <br>
-{{ $movie[0]['duration'] }} <br>
-@endempty
+<a href="/distributor/{{ $distributor->getId() }}">Distributor</a>
 
-@empty($movie)
-<p>No movie at this id</p>
-@endempty
+<h1>{{ $movie->getTitle() }}</h1>
+<h3>{{ $distributor->getName() }}</h3>

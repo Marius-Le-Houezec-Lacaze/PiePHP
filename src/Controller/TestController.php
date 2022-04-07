@@ -4,33 +4,25 @@ namespace Controller;
 
 use Core\Database as Database;
 use Core\ORM as ORM;
-
+use Model\Distributor;
+use Model\Movie;
 
 class TestController extends \Core\Controller
 {
-    public function index()
+    public function index($id)
     {
+        $distributor = Distributor::get($id);
+        $movies = $distributor->getRelation('Movie');
 
-        $orm = new ORM();
-
-        $movies = $orm
-            ->from('movie')
-            ->select('title', 'id', 'duration')
-            ->query();
-
-        $this->render('test', compact('movies'));
+        $this->render('test', compact('movies', 'id'));
     }
 
     public function movie($id)
     {
-        $orm = new ORM();
+        $movie = Movie::get($id);
 
-        $movie = $orm
-            ->from('movie')
-            ->select('duration', 'id', 'title', 'director')
-            ->where('id', $id)
-            ->query();
+        $distributor = $movie->getRelation('Distributor');
 
-        $this->render('movie', compact('movie'));
+        $this->render('movie', compact('movie', 'distributor'));
     }
 }
