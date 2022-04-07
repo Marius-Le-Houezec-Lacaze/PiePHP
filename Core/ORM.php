@@ -2,8 +2,6 @@
 
 namespace Core;
 
-require_once './Database.php';
-
 class ORM
 {
     /**
@@ -41,6 +39,11 @@ class ORM
      */
     private array $_select = [];
 
+    /**
+     * Contain join information
+     */
+    private string $_join = '';
+
 
     /**
      * Construct for ORM take the PDO of a database in parameter
@@ -77,7 +80,6 @@ class ORM
      */
     public function select(...$params): ORM
     {
-        $this->_query_string .= "SELECT ";
         $this->_select = array_merge($this->_select, $params);
         return $this;
     }
@@ -121,7 +123,7 @@ class ORM
             $this->_select = ['*'];
         }
 
-        $this->_query_string .= 'SELECT ' . implode(', ', $this->_select) . " FROM $this->_table";
+        $this->_query_string .= 'SELECT ' . implode(', ', $this->_select) . " FROM $this->_table $this->_join";
     }
 
     /**
@@ -131,10 +133,16 @@ class ORM
      */
     public function fetch()
     {
+
         $this->_prepareSelect();
 
         $this->_setWhere();
+        if (isset($this->_limit)) {
+            $this->_query_string .= " LIMIT $this->_limit";
+        }
+
         $query = $this->_db->prepare($this->_query_string);
+
         $query->execute();
 
         $this->_result = $query->fetchAll(\PDO::FETCH_ASSOC);
@@ -195,9 +203,9 @@ class ORM
      * @param array $array_params the parametter to be
      *                            inserted inside the sql statement
      *
-     * @return bool
+     * @return int|bool
      */
-    public function insert(array $array_params): bool
+    public function insert(array $array_params): int|bool
     {
 
         $params = implode(', ', array_keys($array_params));
@@ -213,7 +221,13 @@ class ORM
 
         $query = $this->_db->prepare($query_string);
 
-        return $query->execute($array_params);
+        $res = $query->execute($array_params);
+
+        if (!$res) {
+            return $res;
+        }
+
+        return $this->_db->lastInsertId();
     }
 
 
@@ -228,7 +242,7 @@ class ORM
     public function update(array $array_params): bool
     {
         $update =  implode(
-            ' ',
+            ', ',
             array_map(
                 fn ($v) => $v . ' = :' . $v,
                 array_keys($array_params)
@@ -238,56 +252,33 @@ class ORM
         $this->_query_string = "UPDATE $this->_table SET $update";
         $this->_setWhere();
 
+        //var_dump($this->_query_string);
         $query = $this->_db->prepare($this->_query_string);
 
         return $query->execute($array_params);
     }
+
+    /**
+     * Join 2 table together on foreign key
+     */
+
+    public function join($table, $key, $type = 1)
+    {
+        $statement = [];
+
+        switch ($type) {
+            case 1:
+                $statement[] = 'LEFT JOIN';
+                break;
+            case 2:
+                $statement[] = 'INNER JOIN';
+                break;
+        }
+
+        $statement[] = $table;
+        $statement[] = "ON $key = $this->_table.id";
+
+        $this->_join = implode(' ', $statement);
+        return $this;
+    }
 }
-
-
-
-
-$orm = new Orm(Database::getInstance());
-
-
-$res = $orm->table('movie')
-    ->where('id = 1')
-    ->update([
-        'title' => 'this is from my query builder update mothafacka'
-    ]);
-            
-// $res =  $orm->table('movie')
-//     ->where('id > 10')
-//     ->where('duration = 100')
-//     ->fetch();
-
-// // $res = $orm->table('membership_log')
-// //     ->where('id_membership = 10')
-// //     ->where('id_session = 26')
-// //     ->delete();
-
-// //     var_dump($res);
-
-// // Instantiate a DateTime with microseconds.
-// $d = new \DateTime('2011-01-01T15:03:01.012345Z');
-
-// // $orm->table('movie')
-// //     ->insert([
-// //         'id_distributor' => '1',
-// //         'director' => 'billy',
-// //         'duration' => '100',
-// //         'release_date' => date_format($d, 'Y-m-d H:i:s'),
-// //         'title' => 'hello world',
-// //         'rating' => '0'
-// //     ]);
-
-
-// var_dump($res);
-
-//$orm->from('movie')->select('title', 'duration')->get();
-//$orm->from('movie')->set(['title' => 'test'])->query();
-
-//                 'movie'
-// $orm->table(Movie::class)->id(1);
-
-//  new Movie()
