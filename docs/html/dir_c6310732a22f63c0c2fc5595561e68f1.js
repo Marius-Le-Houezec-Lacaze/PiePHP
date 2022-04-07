@@ -12,12 +12,14 @@ var dir_c6310732a22f63c0c2fc5595561e68f1 =
       [ "Core\\Database", "classCore_1_1Database.html", "classCore_1_1Database" ]
     ] ],
     [ "Entity.php", "Entity_8php.html", [
-      [ "Entity", "classEntity.html", "classEntity" ]
+      [ "Core\\Entity", "classCore_1_1Entity.html", "classCore_1_1Entity" ]
     ] ],
     [ "Error.php", "Error_8php.html", [
       [ "Core\\Error", "classCore_1_1Error.html", "classCore_1_1Error" ]
     ] ],
-    [ "ORM.php", "ORM_8php.html", "ORM_8php" ],
+    [ "ORM.php", "ORM_8php.html", [
+      [ "Core\\ORM", "classCore_1_1ORM.html", "classCore_1_1ORM" ]
+    ] ],
     [ "Request.php", "Request_8php.html", [
       [ "Core\\Request", "classCore_1_1Request.html", "classCore_1_1Request" ]
     ] ],

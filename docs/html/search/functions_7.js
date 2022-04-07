@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['my_5fautoloader_0',['my_autoloader',['../autoload_8php.html#af27c5ecbd54c8181cc8ef33ad37353cd',1,'autoload.php']]]
+  ['limit_0',['limit',['../classCore_1_1ORM.html#aa987417aa87c9c02d058da1636a61e33',1,'Core::ORM']]]
 ];

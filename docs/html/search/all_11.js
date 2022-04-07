@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['where_0',['where',['../classCore_1_1ORM.html#ac398ec02c68d4f6d84ff921384447791',1,'Core::ORM']]]
+  ['update_0',['update',['../classCore_1_1ORM.html#a57ea37f317322165f90881fa5662ed2e',1,'Core::ORM']]]
 ];

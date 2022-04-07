@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad76fa8a8007f6e5286bada339c5ac5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57ea37f317322165f90881fa5662ed2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1ORM.html#a57ea37f317322165f90881fa5662ed2e">update</a> (array $array_params)</td></tr>
 <tr class="separator:a57ea37f317322165f90881fa5662ed2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b1b8301556d02d95fcf2e8e355cc00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1ORM.html#a39b1b8301556d02d95fcf2e8e355cc00">join</a> ($<a class="el" href="classCore_1_1ORM.html#ac7bd9c05c129552e0a5412c6c691d709">table</a>, $key, $type=1)</td></tr>
+<tr class="separator:a39b1b8301556d02d95fcf2e8e355cc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -146,6 +148,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a423b8a99fd0fdc56dc1d1c888311d55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe985cd6cb905183b239c74b8e144599"><td class="memItemLeft" align="right" valign="top">array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1ORM.html#afe985cd6cb905183b239c74b8e144599">$_select</a> = []</td></tr>
 <tr class="separator:afe985cd6cb905183b239c74b8e144599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a9d1ede9b8de0ffa6f9b6b584ad9fe"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1ORM.html#a43a9d1ede9b8de0ffa6f9b6b584ad9fe">$_join</a> = ''</td></tr>
+<tr class="separator:a43a9d1ede9b8de0ffa6f9b6b584ad9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51c8ea682205822ee83a259380175ef6" name="a51c8ea682205822ee83a259380175ef6"></a>
@@ -288,7 +292,42 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int|bool </dd></dl>
+
+</div>
+</div>
+<a id="a39b1b8301556d02d95fcf2e8e355cc00" name="a39b1b8301556d02d95fcf2e8e355cc00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b1b8301556d02d95fcf2e8e355cc00">&#9670;&nbsp;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Core\ORM::join </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$type</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Join 2 table together on foreign key </p>
 
 </div>
 </div>
@@ -466,6 +505,29 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p ><a class="el" href="classCore_1_1Database.html">Database</a> that will be used in orm instance </p>
+
+</div>
+</div>
+<a id="a43a9d1ede9b8de0ffa6f9b6b584ad9fe" name="a43a9d1ede9b8de0ffa6f9b6b584ad9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a9d1ede9b8de0ffa6f9b6b584ad9fe">&#9670;&nbsp;</a></span>$_join</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Core\ORM::$_join = ''</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Contain join information </p>
 
 </div>
 </div>

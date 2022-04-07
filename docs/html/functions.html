@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>$_db&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a6d5ecd1f66b249e95ff0149f8cce000f">Core\ORM</a></li>
 <li>$_get&#160;:&#160;<a class="el" href="classCore_1_1Request.html#aeab4b47609830dcdc344d64ab5b8ef4a">Core\Request</a>, <a class="el" href="classCore_1_1Router.html#ae28906db1e09c2c3e44122852d0dc6b0">Core\Router</a></li>
 <li>$_instance&#160;:&#160;<a class="el" href="classCore_1_1Database.html#aacdca22a1f2cbe4cbc8dc5ce6f44c294">Core\Database</a></li>
+<li>$_join&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a43a9d1ede9b8de0ffa6f9b6b584ad9fe">Core\ORM</a></li>
 <li>$_limit&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a14185bb020e49a672fd39b5c0f7fc92f">Core\ORM</a></li>
 <li>$_params&#160;:&#160;<a class="el" href="classCore_1_1Request.html#a6eebe9b764c6ed135bb0294241957cad">Core\Request</a></li>
 <li>$_post&#160;:&#160;<a class="el" href="classCore_1_1Request.html#a42b01297c2823d5996e4c9985ded1adc">Core\Request</a>, <a class="el" href="classCore_1_1Router.html#a8c133daf3a04987ac22aac138f1af7bc">Core\Router</a></li>
@@ -103,14 +104,15 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>$_signature&#160;:&#160;<a class="el" href="classCore_1_1TemplateEngine.html#a56dfad9f107ad60e85a0a7af2be29071">Core\TemplateEngine</a></li>
 <li>$_special&#160;:&#160;<a class="el" href="classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd">Core\TemplateEngine</a></li>
 <li>$_table&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a5aa25fe320b52548f581bc98ce1b29ef">Core\ORM</a></li>
-<li>$orm&#160;:&#160;<a class="el" href="classEntity.html#a52ab274e7cd842e293590abbb20fa293">Entity</a></li>
 <li>$request&#160;:&#160;<a class="el" href="classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d">Core\Controller</a></li>
+<li>$table_key&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a9f6a7ba3a159b31d4f78069f2505451c">Core\Entity</a></li>
+<li>$table_name&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a89c60e8608aa87841d6ce216d25fc54e">Core\Entity</a></li>
 </ul>
 
 
 <h3><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
 <li>__call()&#160;:&#160;<a class="el" href="classCore_1_1TemplateEngine.html#ac9d7b09d54e9530040f44c2935def337">Core\TemplateEngine</a></li>
-<li>__construct()&#160;:&#160;<a class="el" href="classCore_1_1Controller.html#a741649ec4e93531011ce3b59fdd1982b">Core\Controller</a>, <a class="el" href="classCore_1_1ORM.html#a51c8ea682205822ee83a259380175ef6">Core\ORM</a>, <a class="el" href="classCore_1_1Request.html#acfd0f6842b45eafd34f1add80ddf0cdd">Core\Request</a>, <a class="el" href="classCore_1_1TemplateEngine.html#ae1dcfea5788a7233cd539d2c7abe661e">Core\TemplateEngine</a>, <a class="el" href="classEntity.html#a714a79b61deabacb12103c1e9e55c8fb">Entity</a></li>
+<li>__construct()&#160;:&#160;<a class="el" href="classCore_1_1Controller.html#a741649ec4e93531011ce3b59fdd1982b">Core\Controller</a>, <a class="el" href="classCore_1_1Entity.html#a37199a0dcf9e5fcc5c6ee6770c847132">Core\Entity</a>, <a class="el" href="classCore_1_1ORM.html#a51c8ea682205822ee83a259380175ef6">Core\ORM</a>, <a class="el" href="classCore_1_1Request.html#acfd0f6842b45eafd34f1add80ddf0cdd">Core\Request</a>, <a class="el" href="classCore_1_1TemplateEngine.html#ae1dcfea5788a7233cd539d2c7abe661e">Core\TemplateEngine</a></li>
 <li>__destruct()&#160;:&#160;<a class="el" href="classCore_1_1Controller.html#a4af473dc832412b26aaf30016c0f9f02">Core\Controller</a></li>
 <li>_checkMatch()&#160;:&#160;<a class="el" href="classCore_1_1Router.html#ae62753fb2800020d0cecae75cffc343a">Core\Router</a></li>
 <li>_echo()&#160;:&#160;<a class="el" href="classCore_1_1TemplateEngine.html#a59d8570a54b31f0e9c8ed32a72be03f1">Core\TemplateEngine</a></li>
@@ -134,7 +136,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
-<li>delete()&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a52a5f7b18317d8eebadc9b13815b53f3">Core\ORM</a></li>
+<li>delete()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a5271c9cf12f7c44798c25fb0b7ea6815">Core\Entity</a>, <a class="el" href="classCore_1_1ORM.html#a52a5f7b18317d8eebadc9b13815b53f3">Core\ORM</a></li>
 </ul>
 
 
@@ -144,8 +146,10 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>get()&#160;:&#160;<a class="el" href="classCore_1_1Request.html#a7f24ff8250b37707cb0458a2dd85a9a8">Core\Request</a>, <a class="el" href="classCore_1_1Router.html#a425014844958cd71b854b9a6b600657c">Core\Router</a></li>
+<li>get()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a9caa2a409fff3e2e721f3a78f70f5f7b">Core\Entity</a>, <a class="el" href="classCore_1_1Request.html#a7f24ff8250b37707cb0458a2dd85a9a8">Core\Request</a>, <a class="el" href="classCore_1_1Router.html#a425014844958cd71b854b9a6b600657c">Core\Router</a></li>
+<li>getAll()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a6273431ab61ed879482885615f0e1ac8">Core\Entity</a></li>
 <li>getInstance()&#160;:&#160;<a class="el" href="classCore_1_1Database.html#abd9a6876476529d1fb4818e9c10ecf75">Core\Database</a></li>
+<li>getRelation()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#acd147da90b87afaa9c07cb0954ddcd8f">Core\Entity</a></li>
 <li>getRoute()&#160;:&#160;<a class="el" href="classCore_1_1Router.html#ac87a2d798c722f07b802e9b85d2ba6cb">Core\Router</a></li>
 <li>getTemplatePath()&#160;:&#160;<a class="el" href="classCore_1_1TemplateEngine.html#a2996d842e24257ed2cd2e9e78688afe3">Core\TemplateEngine</a></li>
 </ul>
@@ -153,6 +157,13 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>insert()&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#ad76fa8a8007f6e5286bada339c5ac5e8">Core\ORM</a></li>
+</ul>
+
+
+<h3><a id="index_j" name="index_j"></a>- j -</h3><ul>
+<li>join()&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a39b1b8301556d02d95fcf2e8e355cc00">Core\ORM</a></li>
+<li>joinMany()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a597dd2e52fc3c23f7f64a90d52a9e02d">Core\Entity</a></li>
+<li>joinOne()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#a84e7e8c7593593377cc79de2afda64e1">Core\Entity</a></li>
 </ul>
 
 
@@ -174,6 +185,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>save()&#160;:&#160;<a class="el" href="classCore_1_1Entity.html#aa02c6a48149c3795151cfc21b9f8ce85">Core\Entity</a></li>
 <li>select()&#160;:&#160;<a class="el" href="classCore_1_1ORM.html#a492bdbc95c9334bc10ea09271bea891e">Core\ORM</a></li>
 <li>setParams()&#160;:&#160;<a class="el" href="classCore_1_1Request.html#a45ad4f96b4515caa5b9d94da2bccf018">Core\Request</a></li>
 </ul>

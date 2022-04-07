@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['table_0',['table',['../classCore_1_1ORM.html#ac7bd9c05c129552e0a5412c6c691d709',1,'Core::ORM']]],
-  ['templateerror_1',['templateError',['../classCore_1_1Error.html#ae1ac4798bbe4b33977cf3b9a4ade6921',1,'Core::Error']]]
+  ['save_0',['save',['../classCore_1_1Entity.html#aa02c6a48149c3795151cfc21b9f8ce85',1,'Core::Entity']]],
+  ['select_1',['select',['../classCore_1_1ORM.html#a492bdbc95c9334bc10ea09271bea891e',1,'Core::ORM']]],
+  ['setparams_2',['setParams',['../classCore_1_1Request.html#a45ad4f96b4515caa5b9d94da2bccf018',1,'Core::Request']]]
 ];
