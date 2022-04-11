@@ -141,6 +141,7 @@ class ORM
             $this->_query_string .= " LIMIT $this->_limit";
         }
 
+
         $query = $this->_db->prepare($this->_query_string);
 
         $query->execute();
@@ -262,7 +263,7 @@ class ORM
      * Join 2 table together on foreign key
      */
 
-    public function join($table, $key, $type = 1)
+    public function join($table, $key, $pivot = false, $type = 1)
     {
         $statement = [];
 
@@ -275,10 +276,17 @@ class ORM
                 break;
         }
 
-        $statement[] = $table;
-        $statement[] = "ON $key = $this->_table.id";
+        if ($pivot === false) {
+            $pivots = $this->_table;
+        } else {
+            $pivots = $pivot;
+        }
 
-        $this->_join = implode(' ', $statement);
+
+        $statement[] = $table;
+        $statement[] = "ON $key = $pivots.id";
+
+        $this->_join .= ' ' . implode(' ', $statement);
         return $this;
     }
 }

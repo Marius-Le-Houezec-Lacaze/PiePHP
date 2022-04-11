@@ -2,3 +2,4 @@ phpcs.phar
 phpcbf.phar
 my-db/*
 .cache/*
+vendor/*

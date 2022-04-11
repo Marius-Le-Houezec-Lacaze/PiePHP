@@ -90,22 +90,37 @@ abstract class Entity
         }, $res);
     }
 
-    public function getRelation(...$relations)
+    public function getRelation($relation)
     {
 
+        $orm = new ORM(Database::getInstance());
+        $class = strtolower($relation);
+        if (isset($this->has_many_trough)) {
+            if (isset($this->has_many_trough[$relation])) {
+                $rel = $this->has_many_trough[$relation];
+                [$join_table, $pivot] = $this->has_many_trough[$relation];
+                $raw = $orm->table($this->table_name)
+                    ->select($class . '.*')
+                    ->join($join_table, $pivot)
+                    ->join($class, 'id_' . $class, $class)
+                    ->where("$this->table_name.id = $this->id")
+                    ->fetch();
 
-        foreach ($relations as $relation) {
-            $class = strtolower($relation);
-
-            if (isset($this->has_many)) {
-                $rel = $this->has_many[$relation];
+                return array_map(function ($entry) use ($class) {
+                    return new ('\Model\\' . ucfirst($class))($entry);
+                }, $raw);
+            }
+        }
+        if (isset($this->has_many)) {
+            $rel = $this->has_many[$relation];
+            if (isset($rel))
                 return $this->joinMany($class, $rel);
-            }
+        }
 
-            if (isset($this->has_one)) {
-                $rel = $this->has_one[$relation];
+        if (isset($this->has_one)) {
+            $rel = $this->has_one[$relation];
+            if (isset($rel))
                 return $this->joinOne($class, $rel);
-            }
         }
     }
 
@@ -131,9 +146,9 @@ abstract class Entity
             ->join($class, $relation)
             ->where($this->table_name  . '.id = ' . $this->id);
 
-        // if (isset($this->has_one)) {
-        //     $db->limit(1);
-        // }
+        if (isset($this->has_one)) {
+            $db->limit(1);
+        }
 
         $db = $db->fetch();
         $res = [];

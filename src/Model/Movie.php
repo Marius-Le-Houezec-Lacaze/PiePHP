@@ -4,31 +4,28 @@ namespace Model;
 
 class Movie extends \Core\Entity
 {
-    protected int $id;
+    protected $id;
 
-    protected int $id_distributor;
+    protected $name;
+    protected $id_genre;
 
-    protected int|null $duration;
-
-    protected string $release_date;
-
-    protected string $title;
-
-    protected string $rating;
-
-    protected string $director;
-
-    protected array $has_one = [
-        'Distributor' => 'id_distributor'
+    protected $has_one = [
+        'Genre' => 'id_genre'
     ];
 
-
+    public function getName()
+    {
+        return $this->name;
+    }
     public function getId()
     {
         return $this->id;
     }
-    public function getTitle()
+
+    public function getGenre()
     {
-        return $this->title;
+        $genre =  $this->getRelation('Genre');
+
+        return $genre->getName();
     }
 }

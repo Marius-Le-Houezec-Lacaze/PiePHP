@@ -33,11 +33,11 @@ class Request
 
 
         foreach ($_GET as $key => $value) {
-            $this->_get->$key = $this->_secureInput($value);
+            $this->_get[$key] = $this->_secureInput($value);
         }
 
         foreach ($_POST as $key => $value) {
-            $this->_post->$key = $this->_secureInput($value);
+            $this->_post[$key] = $this->_secureInput($value);
         }
     }
 
@@ -57,7 +57,7 @@ class Request
      *
      * @return stdClass
      */
-    public function post(): stdClass
+    public function post(): array
     {
         return $this->_post;
     }
