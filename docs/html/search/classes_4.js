@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['request_0',['Request',['../classCore_1_1Request.html',1,'Core']]],
-  ['router_1',['Router',['../classCore_1_1Router.html',1,'Core']]]
+  ['orm_0',['ORM',['../classCore_1_1ORM.html',1,'Core']]]
 ];

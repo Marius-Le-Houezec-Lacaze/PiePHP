@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orm_0',['ORM',['../classCore_1_1ORM.html',1,'Core']]]
+  ['inttype_0',['IntType',['../classType_1_1IntType.html',1,'Type']]]
 ];

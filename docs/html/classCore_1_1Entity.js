@@ -7,6 +7,7 @@ var classCore_1_1Entity =
     [ "getRelation", "classCore_1_1Entity.html#a05f3f528991247891efb0be86bce5a52", null ],
     [ "joinMany", "classCore_1_1Entity.html#a597dd2e52fc3c23f7f64a90d52a9e02d", null ],
     [ "joinOne", "classCore_1_1Entity.html#a84e7e8c7593593377cc79de2afda64e1", null ],
+    [ "jsonSerialize", "classCore_1_1Entity.html#adc23f4df803d534a8074156e777e9e26", null ],
     [ "save", "classCore_1_1Entity.html#aa02c6a48149c3795151cfc21b9f8ce85", null ],
     [ "$table_key", "classCore_1_1Entity.html#a9f6a7ba3a159b31d4f78069f2505451c", null ],
     [ "$table_name", "classCore_1_1Entity.html#a89c60e8608aa87841d6ce216d25fc54e", null ]

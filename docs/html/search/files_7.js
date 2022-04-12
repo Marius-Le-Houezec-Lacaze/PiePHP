@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['templateengine_20copy_2ephp_63',['TemplateEngine copy.php',['../TemplateEngine_01copy_8php.html',1,'']]],
-  ['templateengine_2ephp_64',['TemplateEngine.php',['../TemplateEngine_8php.html',1,'']]]
+  ['template_2ephp_0',['Template.php',['../Template_8php.html',1,'']]],
+  ['templateengine_2ephp_1',['TemplateEngine.php',['../TemplateEngine_8php.html',1,'']]]
 ];

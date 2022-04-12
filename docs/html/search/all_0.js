@@ -9,7 +9,7 @@ var searchData=
   ['_24_5fjoin_6',['$_join',['../classCore_1_1ORM.html#a43a9d1ede9b8de0ffa6f9b6b584ad9fe',1,'Core::ORM']]],
   ['_24_5flimit_7',['$_limit',['../classCore_1_1ORM.html#a14185bb020e49a672fd39b5c0f7fc92f',1,'Core::ORM']]],
   ['_24_5fparams_8',['$_params',['../classCore_1_1Request.html#a6eebe9b764c6ed135bb0294241957cad',1,'Core::Request']]],
-  ['_24_5fpost_9',['$_post',['../classCore_1_1Router.html#a8c133daf3a04987ac22aac138f1af7bc',1,'Core\Router\$_post()'],['../classCore_1_1Request.html#a42b01297c2823d5996e4c9985ded1adc',1,'Core\Request\$_post()']]],
+  ['_24_5fpost_9',['$_post',['../classCore_1_1Request.html#a42b01297c2823d5996e4c9985ded1adc',1,'Core\Request\$_post()'],['../classCore_1_1Router.html#a8c133daf3a04987ac22aac138f1af7bc',1,'Core\Router\$_post()']]],
   ['_24_5fquery_5fstring_10',['$_query_string',['../classCore_1_1ORM.html#adabb0326d19e96cb8e29db4e8818a888',1,'Core::ORM']]],
   ['_24_5frender_11',['$_render',['../classCore_1_1Controller.html#a394dc1f3e2cf324fc53efb31718a6d7f',1,'Core::Controller']]],
   ['_24_5fresult_12',['$_result',['../classCore_1_1ORM.html#a92e6c80b1cb614403cfb78d4d40c1c5b',1,'Core::ORM']]],
@@ -17,7 +17,15 @@ var searchData=
   ['_24_5fsignature_14',['$_signature',['../classCore_1_1TemplateEngine.html#a56dfad9f107ad60e85a0a7af2be29071',1,'Core::TemplateEngine']]],
   ['_24_5fspecial_15',['$_special',['../classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd',1,'Core::TemplateEngine']]],
   ['_24_5ftable_16',['$_table',['../classCore_1_1ORM.html#a5aa25fe320b52548f581bc98ce1b29ef',1,'Core::ORM']]],
-  ['_24request_17',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]],
-  ['_24table_5fkey_18',['$table_key',['../classCore_1_1Entity.html#a9f6a7ba3a159b31d4f78069f2505451c',1,'Core::Entity']]],
-  ['_24table_5fname_19',['$table_name',['../classCore_1_1Entity.html#a89c60e8608aa87841d6ce216d25fc54e',1,'Core::Entity']]]
+  ['_24classes_17',['$classes',['../namespaceCore.html#aaf6c1eee4a5c07655f0451f4ceb869d8',1,'Core']]],
+  ['_24dependency_18',['$dependency',['../namespaceCore.html#a95cada70a4c68708217a6d562d76156f',1,'Core']]],
+  ['_24dir_19',['$dir',['../namespaceCore.html#ac364ed1676a38cadfcd778588c1ed449',1,'Core']]],
+  ['_24done_20',['$done',['../namespaceCore.html#ac5db0ad2f07b73b06abbe1b872a8bf07',1,'Core']]],
+  ['_24models_21',['$models',['../namespaceCore.html#a3381789527e5323031a144eed8ea5410',1,'Core']]],
+  ['_24request_22',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]],
+  ['_24sql_23',['$sql',['../namespaceCore.html#a21ff2558e9993d060075cdc052407761',1,'Core']]],
+  ['_24table_5fkey_24',['$table_key',['../classCore_1_1Entity.html#a9f6a7ba3a159b31d4f78069f2505451c',1,'Core::Entity']]],
+  ['_24table_5fname_25',['$table_name',['../classCore_1_1Entity.html#a89c60e8608aa87841d6ce216d25fc54e',1,'Core::Entity']]],
+  ['_24tree_26',['$tree',['../namespaceCore.html#a92ae18a630b9d47e96a32bc11ef3e844',1,'Core']]],
+  ['_24type_27',['$type',['../classType_1_1StringType.html#ab5187d3ab1e8280bc9293bca49e8d561',1,'Type\StringType\$type()'],['../classType_1_1IntType.html#a89d206ee61a8823a129d0af81777ba84',1,'Type\IntType\$type()']]]
 ];
