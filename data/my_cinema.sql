@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS cinema;
+
 CREATE DATABASE my_cinema;
 
 USE my_cinema;
@@ -11,12 +12,11 @@ CREATE TABLE user (
 );
 
 CREATE TABLE movie (
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     id_genre INT NOT NULL,
-    PRIMARY KEY (id),
     FOREIGN KEY (id_genre) REFERENCES genre(id)
-);  
+);
 
 CREATE TABLE genre (
     id INT NOT NULL AUTO_INCREMENT,
@@ -31,4 +31,30 @@ CREATE TABLE history (
     PRIMARY KEY (id),
     FOREIGN KEY (id_user) REFERENCES user(id),
     FOREIGN KEY (id_movie) REFERENCES movie(id)
+);
+
+CREATE TABLE genre (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE history (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_movie INT NOT NULL,
+    id_user INT NOT NULL,
+    FOREIGN KEY (id_movie) REFERENCES movie(id),
+    FOREIGN KEY (id_user) REFERENCES user(id)
+);
+
+CREATE TABLE movie (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    id_genre INT NOT NULL,
+    FOREIGN KEY (id_genre) REFERENCES genre(id)
+);
+
+CREATE TABLE user (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(128) NOT NULL,
+    password VARCHAR(255) NOT NULL
 );

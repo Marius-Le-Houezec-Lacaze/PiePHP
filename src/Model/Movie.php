@@ -4,9 +4,13 @@ namespace Model;
 
 class Movie extends \Core\Entity
 {
+    #[\Type\IntType(null: false, auto_increment: true, primary_key: true)]
     protected $id;
 
+    #[\Type\StringType]
     protected $name;
+
+    #[\Type\IntType(null: false)]
     protected $id_genre;
 
     protected $has_one = [

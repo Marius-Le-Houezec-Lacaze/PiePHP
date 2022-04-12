@@ -10,6 +10,8 @@ Router::post('/movie/delete/:id', ['Controller' => 'Movie', 'action' => 'delete'
 Router::get('/genres', ['Controller' => 'Genre', 'action' => 'index']);
 Router::get('/genre/:id', ['Controller' => 'Genre', 'action' => 'page']);
 
+Router::get('/register', ['Controller' => 'User', 'action' => 'register_view']);
+Router::post('/register', ['Controller' => 'User', 'action' => 'register']);
 
 
 

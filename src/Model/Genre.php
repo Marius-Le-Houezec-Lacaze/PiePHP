@@ -4,8 +4,11 @@ namespace Model;
 
 class Genre extends \Core\Entity
 {
+
+    #[\Type\IntType(null: false, auto_increment: true, primary_key: true)]
     protected int $id;
 
+    #[\Type\StringType(null: false)]
     protected string $name;
 
     protected $has_many = [
