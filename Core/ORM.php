@@ -141,6 +141,7 @@ class ORM
             $this->_query_string .= " LIMIT $this->_limit";
         }
 
+        //var_dump($this->_query_string);
 
         $query = $this->_db->prepare($this->_query_string);
 

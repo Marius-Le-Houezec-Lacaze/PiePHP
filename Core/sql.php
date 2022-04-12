@@ -1,0 +1,110 @@
+<?php
+
+namespace Core {
+
+
+    include_once './Attributes.php';
+
+    use phpDocumentor\Reflection\PseudoTypes\LowercaseString;
+    use ReflectionClass;
+
+    $tree = [];
+    class Entity
+    {
+    }
+
+    $sql = "";
+    $dir = '../src/Model/*.php';
+    $classes = [];
+    $models = glob($dir);
+
+
+    $dependency = [];
+
+    foreach ($models as $model) {
+        $classes[] = basename($model, ".php");
+        include $model;
+    }
+
+    foreach ($classes as $class) {
+        $dependency[$class] = ["sql" => '', 'dependency' => []];
+    }
+
+    foreach ($classes as $class) {
+        $obj = new ('Model\\' . $class);
+        $reflection = new ReflectionClass($obj);
+        $properties = $reflection->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
+
+        foreach ($properties as $property) {
+            if ($property->getName() == 'has_one') {
+                $property->setAccessible(true);
+                $dependency[$class]['dependency'] = array_keys($property->getValue($obj));
+            }
+        }
+
+        $entries = get_sql_statement($properties, $obj);
+        $table_name = strtolower($class);
+
+        $dependency[$class]['sql'] = "CREATE TABLE $table_name (" . implode("," . PHP_EOL, $entries) . ");" . PHP_EOL;
+
+        //$sql .= "CREATE TABLE $table_name (" . implode("," . PHP_EOL, $entries) . ");" . PHP_EOL;
+    }
+
+
+    $sql = "";
+
+    $done = [];
+
+    //var_dump($dependency);
+    while ($dependency) {
+
+        $current = array_splice($dependency, 0, 1);
+        $key = key($current);
+
+        if (sizeof($current[$key]['dependency']) == 0) {
+            $done[] = $key;
+            $sql .= $current[$key]['sql'];
+        } else {
+            $i = 0;
+            foreach ($current[$key]['dependency'] as $dep) {
+                if (!in_array($dep, $done)) {
+                    $i++;
+                }
+            }
+            if ($i != 0) {
+                $dependency[$key] = array_pop($current);
+            } else {
+                $done[] = $key;
+                $sql .= $current[$key]['sql'];
+            }
+        }
+    }
+
+
+    //var_dump($sql);
+    file_put_contents('out.sql', $sql);
+
+    function get_sql_statement($properties, $obj)
+    {
+        $entries = [];
+
+        foreach ($properties as $property) {
+            foreach ($property->getAttributes() as $attribute) {
+                $instance = $attribute->newInstance();
+                $entries[] = strtolower($property->getName()) . " " . $instance->getType();
+            }
+
+            if ($property->getName() == 'has_one') {
+
+                $property->setAccessible(true);
+
+                foreach ($property->getValue($obj) as $key => $value) {
+                    $table_name = strtolower($key);
+                    $entries[] = "FOREIGN KEY ($value) REFERENCES $table_name(id)";
+                }
+            };
+        }
+
+        return $entries;
+    }
+}

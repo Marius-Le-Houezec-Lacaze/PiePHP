@@ -13,11 +13,16 @@ function my_autoloader(string $class)
         include implode(DIRECTORY_SEPARATOR, ['Core', end($part) . '.php']);
     }
 
+    if ($part[0] == 'Type') {
+        include implode(DIRECTORY_SEPARATOR, ['Core', 'attributes', end($part) . '.php']);
+    }
+
     if ($part[0] == 'Controller') {
         include implode(DIRECTORY_SEPARATOR, ['src', 'Controller', end($part) . '.php']);
     }
 
     if ($part[0] == 'Model') {
+        include_once 'Attributes.php';
         include implode(DIRECTORY_SEPARATOR, ['src', 'Model', end($part) . '.php']);
     }
 }

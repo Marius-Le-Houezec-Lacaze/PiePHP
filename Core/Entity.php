@@ -4,7 +4,7 @@ namespace Core;
 
 use ReflectionClass;
 
-abstract class Entity
+abstract class Entity implements \JsonSerializable
 {
     //protected array $has_many;
 
@@ -157,5 +157,17 @@ abstract class Entity
             $res[] = new ('\Model\\' . ucfirst($class))($r);
         }
         return $res;
+    }
+
+    public function jsonSerialize():mixed
+    {
+
+        $json = [];
+
+        foreach ($this->table_key as $key => $index) {
+
+            $json[$key] = $this->$key;
+        }
+        return $json;
     }
 }
