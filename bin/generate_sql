@@ -1,9 +1,15 @@
+#!/bin/env php
 <?php
 
 namespace Core {
 
+    spl_autoload_register(function (string $class) {
+        $part = explode('\\', $class);
 
-    include_once './Attributes.php';
+        if ($part[0] == 'Type') {
+            include implode(DIRECTORY_SEPARATOR, ['Core', 'Type', end($part) . '.php']);
+        }
+    });
 
     use phpDocumentor\Reflection\PseudoTypes\LowercaseString;
     use ReflectionClass;
@@ -14,10 +20,9 @@ namespace Core {
     }
 
     $sql = "";
-    $dir = '../src/Model/*.php';
+    $dir = './src/Model/*.php';
     $classes = [];
     $models = glob($dir);
-
 
     $dependency = [];
 
@@ -46,8 +51,6 @@ namespace Core {
         $table_name = strtolower($class);
 
         $dependency[$class]['sql'] = "CREATE TABLE $table_name (" . implode("," . PHP_EOL, $entries) . ");" . PHP_EOL;
-
-        //$sql .= "CREATE TABLE $table_name (" . implode("," . PHP_EOL, $entries) . ");" . PHP_EOL;
     }
 
 
@@ -55,7 +58,6 @@ namespace Core {
 
     $done = [];
 
-    //var_dump($dependency);
     while ($dependency) {
 
         $current = array_splice($dependency, 0, 1);

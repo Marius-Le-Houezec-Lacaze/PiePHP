@@ -7,6 +7,7 @@
  */
 function my_autoloader(string $class)
 {
+    
     $part = explode('\\', $class);
 
     if ($part[0] == 'Core') {
@@ -22,8 +23,11 @@ function my_autoloader(string $class)
     }
 
     if ($part[0] == 'Model') {
-        include_once 'Attributes.php';
         include implode(DIRECTORY_SEPARATOR, ['src', 'Model', end($part) . '.php']);
+    }
+
+    if ($part[0] == 'Type') {
+        include implode(DIRECTORY_SEPARATOR, ['Core', 'Type', end($part) . '.php']);
     }
 }
 
