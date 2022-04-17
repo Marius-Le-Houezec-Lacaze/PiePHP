@@ -27,7 +27,7 @@ class TemplateEngine
     /**
      * Contain instruction for _special end statement
      */
-    private array $_special = ['endempty' => 'endif', 'endisset' => 'endif'];
+    private array $_special = ['endempty' => 'endif;', 'endisset' => 'endif;', 'else' => 'else:'];
 
     /**
      * Assign the variable and hash the md5 of the file for verification
@@ -149,13 +149,12 @@ class TemplateEngine
     {
         [$full, $action] = $match;
 
+
         if (isset($this->_special[$action])) {
             $action = $this->_special[$action];
         }
-
-        return "<? $action;?>";
+        return "<? $action ?>";
     }
-
     /**
      * Replace @empty(action) with appropriate php statement
      *
@@ -194,6 +193,11 @@ class TemplateEngine
         return "<?= htmlentities($val[1]) ?>";
     }
 
+    private function _else()
+    {
+        return "<? else: ?>";
+    }
+
     /**
      * Handle when an unknown template action is called
      * and display an error message, also avoid the template to be cached
@@ -205,6 +209,7 @@ class TemplateEngine
      */
     public function __call(string $name, array $arguments)
     {
-        Error::templateError("Fatal templating error unknown argument $name");
+        var_dump($name);
+        //Error::templateError("Fatal templating error unknown argument $name");
     }
 }

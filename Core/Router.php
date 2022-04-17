@@ -146,4 +146,17 @@ class Router
         }
         return false;
     }
+
+
+    /**
+     * Dynamic router stupid but required 
+    */
+    public static function Dynamic()
+    {
+        [$empty, $controller, $action] = explode('/', $_SERVER['REQUEST_URI']);
+
+        $d = new ('Controller\\' . ucfirst($controller . 'Controller'))();
+
+        $d->$action();
+    }
 }

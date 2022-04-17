@@ -2,8 +2,8 @@
     <div class="column">
     </div>
     <div class="column">
-        <h1 class="title is-1">Register:</h1>
-        <form action="/register" , method="POST">
+        <h1 class="title is-1">Login:</h1>
+        <form action="/login" , method="POST">
             <div class="field">
                 <label for="name">Username:</label>
                 <input class="input is-normal" type="text" name="name" id="">
@@ -12,14 +12,6 @@
                 <label for="password">Password:</label>
                 <input class="input is-normal" type="text" name="password" id="">
             </div>
-
-            <div class="field">
-                <label class="bio">Bio:</label>
-                <div class="control">
-                    <textarea name="bio" class="textarea"></textarea>
-                </div>
-            </div>
-
             <div class="field">
                 <div class="control">
                     <button class="button is-link" type="submit">Submit</button>

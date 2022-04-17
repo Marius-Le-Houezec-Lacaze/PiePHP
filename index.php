@@ -6,5 +6,6 @@ define('METHOD', $_SERVER['REQUEST_METHOD']);
 define('URI', parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
 
 require_once(implode(DIRECTORY_SEPARATOR, ['Core', 'autoload.php']));
+session_start();
 $app = new Core\Core();
 $app->run();

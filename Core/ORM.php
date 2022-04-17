@@ -97,7 +97,6 @@ class ORM
         return $this;
     }
 
-
     /**
      * Limit the number of result in the sql query
      *
@@ -186,9 +185,9 @@ class ORM
     /**
      * Execute the DELETE statement
      *
-     * @return void
+     * @return bool
      */
-    public function delete()
+    public function delete(): bool
     {
         $this->_query_string .= "DELETE FROM $this->_table";
         $this->_setWhere();
@@ -223,6 +222,9 @@ class ORM
 
         $query = $this->_db->prepare($query_string);
 
+        var_dump($query_string);
+        var_dump($array_params);
+        
         $res = $query->execute($array_params);
 
         if (!$res) {
