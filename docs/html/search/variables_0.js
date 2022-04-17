@@ -18,8 +18,7 @@ var searchData=
   ['_24_5fspecial_15',['$_special',['../classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd',1,'Core::TemplateEngine']]],
   ['_24_5ftable_16',['$_table',['../classCore_1_1ORM.html#a5aa25fe320b52548f581bc98ce1b29ef',1,'Core::ORM']]],
   ['_24request_17',['$request',['../classCore_1_1Controller.html#abce6c5710dd1adabaa1e92c7a561556d',1,'Core::Controller']]],
-  ['_24stack_18',['$stack',['../test_8php.html#a6a0169b26b5301f906b1ec481b3f1eea',1,'test.php']]],
-  ['_24table_5fkey_19',['$table_key',['../classCore_1_1Entity.html#a9f6a7ba3a159b31d4f78069f2505451c',1,'Core::Entity']]],
-  ['_24table_5fname_20',['$table_name',['../classCore_1_1Entity.html#a89c60e8608aa87841d6ce216d25fc54e',1,'Core::Entity']]],
-  ['_24type_21',['$type',['../classType_1_1IntType.html#a89d206ee61a8823a129d0af81777ba84',1,'Type\IntType\$type()'],['../classType_1_1StringType.html#ab5187d3ab1e8280bc9293bca49e8d561',1,'Type\StringType\$type()']]]
+  ['_24table_5fkey_18',['$table_key',['../classCore_1_1Entity.html#a9f6a7ba3a159b31d4f78069f2505451c',1,'Core::Entity']]],
+  ['_24table_5fname_19',['$table_name',['../classCore_1_1Entity.html#a89c60e8608aa87841d6ce216d25fc54e',1,'Core::Entity']]],
+  ['_24type_20',['$type',['../classType_1_1Date.html#adbd38f481f708cdb699376d33153b35c',1,'Type\Date\$type()'],['../classType_1_1IntType.html#a89d206ee61a8823a129d0af81777ba84',1,'Type\IntType\$type()'],['../classType_1_1StringType.html#ab5187d3ab1e8280bc9293bca49e8d561',1,'Type\StringType\$type()'],['../classType_1_1Text.html#ad4d71b8f52fec026af5c19fecfad3dbd',1,'Type\Text\$type()'],['../classType_1_1TimeStamp.html#ab510eb8556e6d6b12d5436f3847edddc',1,'Type\TimeStamp\$type()']]]
 ];

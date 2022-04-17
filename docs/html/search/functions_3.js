@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fetch_0',['fetch',['../classCore_1_1ORM.html#ad85fa395a0b5d582327f26389fb85a06',1,'Core::ORM']]]
+  ['elseif_0',['elseif',['../classCore_1_1TemplateEngine.html#a81f9e23ee247def44f3d00960d324908',1,'Core::TemplateEngine']]]
 ];

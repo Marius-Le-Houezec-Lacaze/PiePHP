@@ -108,8 +108,10 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:af2104efa2e97bc8055349380255cf8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a6ccd19bc40af06555c9ab004987708"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a6a6ccd19bc40af06555c9ab004987708">_evalPattern</a> (array $match)</td></tr>
 <tr class="separator:a6a6ccd19bc40af06555c9ab004987708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac804b89e9d35323c4056137b88f903e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#ac804b89e9d35323c4056137b88f903e5">_if</a> (string $eval)</td></tr>
-<tr class="separator:ac804b89e9d35323c4056137b88f903e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49af11c08db9ee790894608fc04c2778"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a49af11c08db9ee790894608fc04c2778">if</a> (array $eval)</td></tr>
+<tr class="separator:a49af11c08db9ee790894608fc04c2778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f9e23ee247def44f3d00960d324908"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a81f9e23ee247def44f3d00960d324908">elseif</a> (array $eval)</td></tr>
+<tr class="separator:a81f9e23ee247def44f3d00960d324908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af19f3fafca0fefe38bde1b450f0795c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#af19f3fafca0fefe38bde1b450f0795c5">_foreach</a> (string $eval)</td></tr>
 <tr class="separator:af19f3fafca0fefe38bde1b450f0795c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74631590c47301f3c4e89114d13dfaa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a74631590c47301f3c4e89114d13dfaa6">_end</a> (array $match)</td></tr>
@@ -120,6 +122,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a35d96dcec7addad54c2519a03e8bec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59d8570a54b31f0e9c8ed32a72be03f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a59d8570a54b31f0e9c8ed32a72be03f1">_echo</a> (array $val)</td></tr>
 <tr class="separator:a59d8570a54b31f0e9c8ed32a72be03f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657b0500cbefb5e91fa6121113a26bf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a657b0500cbefb5e91fa6121113a26bf5">_else</a> ()</td></tr>
+<tr class="separator:a657b0500cbefb5e91fa6121113a26bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -129,7 +133,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab8c2faf15d68463a3007a92c9068e2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafa8514fcd5dce4a2b4bd4e8092b9f5d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#aafa8514fcd5dce4a2b4bd4e8092b9f5d">$_cache_path</a></td></tr>
 <tr class="separator:aafa8514fcd5dce4a2b4bd4e8092b9f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9171b88075a0a2c9f2f4d020bb6b35dd"><td class="memItemLeft" align="right" valign="top">array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd">$_special</a> = ['endempty' =&gt; 'endif', 'endisset' =&gt; 'endif']</td></tr>
+<tr class="memitem:a9171b88075a0a2c9f2f4d020bb6b35dd"><td class="memItemLeft" align="right" valign="top">array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1TemplateEngine.html#a9171b88075a0a2c9f2f4d020bb6b35dd">$_special</a> = ['endempty' =&gt; 'endif;', 'endisset' =&gt; 'endif;', 'else' =&gt; 'else:']</td></tr>
 <tr class="separator:a9171b88075a0a2c9f2f4d020bb6b35dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -224,6 +228,31 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+</div>
+</div>
+<a id="a657b0500cbefb5e91fa6121113a26bf5" name="a657b0500cbefb5e91fa6121113a26bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657b0500cbefb5e91fa6121113a26bf5">&#9670;&nbsp;</a></span>_else()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Core\TemplateEngine::_else </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -363,33 +392,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac804b89e9d35323c4056137b88f903e5" name="ac804b89e9d35323c4056137b88f903e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac804b89e9d35323c4056137b88f903e5">&#9670;&nbsp;</a></span>_if()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Core\TemplateEngine::_if </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$eval</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Replace </p>
-
-</div>
-</div>
 <a id="a35d96dcec7addad54c2519a03e8bec7c" name="a35d96dcec7addad54c2519a03e8bec7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35d96dcec7addad54c2519a03e8bec7c">&#9670;&nbsp;</a></span>_isset()</h2>
 
@@ -452,6 +454,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a81f9e23ee247def44f3d00960d324908" name="a81f9e23ee247def44f3d00960d324908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f9e23ee247def44f3d00960d324908">&#9670;&nbsp;</a></span>elseif()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Core\TemplateEngine::elseif </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$eval</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2996d842e24257ed2cd2e9e78688afe3" name="a2996d842e24257ed2cd2e9e78688afe3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2996d842e24257ed2cd2e9e78688afe3">&#9670;&nbsp;</a></span>getTemplatePath()</h2>
 
@@ -468,6 +496,33 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >Check if the template asked is not already cached, if so return it. If the template is not already cached call, self::parse_file() and process the template first.</p>
 <dl class="section return"><dt>Returns</dt><dd>string the path of the cached template </dd></dl>
+
+</div>
+</div>
+<a id="a49af11c08db9ee790894608fc04c2778" name="a49af11c08db9ee790894608fc04c2778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49af11c08db9ee790894608fc04c2778">&#9670;&nbsp;</a></span>if()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Core\TemplateEngine::if </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$eval</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Replace </p>
 
 </div>
 </div>
@@ -551,7 +606,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">array Core\TemplateEngine::$_special = ['endempty' =&gt; 'endif', 'endisset' =&gt; 'endif']</td>
+          <td class="memname">array Core\TemplateEngine::$_special = ['endempty' =&gt; 'endif;', 'endisset' =&gt; 'endif;', 'else' =&gt; 'else:']</td>
         </tr>
       </table>
   </td>

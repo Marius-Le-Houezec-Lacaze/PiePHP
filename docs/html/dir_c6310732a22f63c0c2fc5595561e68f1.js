@@ -28,6 +28,5 @@ var dir_c6310732a22f63c0c2fc5595561e68f1 =
     ] ],
     [ "TemplateEngine.php", "TemplateEngine_8php.html", [
       [ "Core\\TemplateEngine", "classCore_1_1TemplateEngine.html", "classCore_1_1TemplateEngine" ]
-    ] ],
-    [ "test.php", "test_8php.html", "test_8php" ]
+    ] ]
 ];

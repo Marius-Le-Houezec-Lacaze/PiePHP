@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['join_0',['join',['../classCore_1_1ORM.html#aa35ac1eefb191a7a52db8b5dd54123c5',1,'Core::ORM']]],
-  ['joinmany_1',['joinMany',['../classCore_1_1Entity.html#a597dd2e52fc3c23f7f64a90d52a9e02d',1,'Core::Entity']]],
-  ['joinone_2',['joinOne',['../classCore_1_1Entity.html#a84e7e8c7593593377cc79de2afda64e1',1,'Core::Entity']]],
-  ['jsonserialize_3',['jsonSerialize',['../classCore_1_1Entity.html#adc23f4df803d534a8074156e777e9e26',1,'Core::Entity']]]
+  ['if_0',['if',['../classCore_1_1TemplateEngine.html#a49af11c08db9ee790894608fc04c2778',1,'Core::TemplateEngine']]],
+  ['insert_1',['insert',['../classCore_1_1ORM.html#ad76fa8a8007f6e5286bada339c5ac5e8',1,'Core::ORM']]]
 ];

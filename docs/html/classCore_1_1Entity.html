@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa02c6a48149c3795151cfc21b9f8ce85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f3f528991247891efb0be86bce5a52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1Entity.html#a05f3f528991247891efb0be86bce5a52">getRelation</a> ($relation)</td></tr>
 <tr class="separator:a05f3f528991247891efb0be86bce5a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9b40978ebcc3e0527df4f3e99cf36d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1Entity.html#a8a9b40978ebcc3e0527df4f3e99cf36d">deleteRelation</a> ($class)</td></tr>
+<tr class="separator:a8a9b40978ebcc3e0527df4f3e99cf36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc23f4df803d534a8074156e777e9e26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1Entity.html#adc23f4df803d534a8074156e777e9e26">jsonSerialize</a> ()</td></tr>
 <tr class="separator:adc23f4df803d534a8074156e777e9e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -129,6 +131,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9caa2a409fff3e2e721f3a78f70f5f7b"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1Entity.html#a9caa2a409fff3e2e721f3a78f70f5f7b">get</a> (int $id)</td></tr>
 <tr class="separator:a9caa2a409fff3e2e721f3a78f70f5f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947136900c5423c7968b9b568c65d2bc"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1Entity.html#a947136900c5423c7968b9b568c65d2bc">whereLike</a> ($field, $value)</td></tr>
+<tr class="separator:a947136900c5423c7968b9b568c65d2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6273431ab61ed879482885615f0e1ac8"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1Entity.html#a6273431ab61ed879482885615f0e1ac8">getAll</a> (... $fields)</td></tr>
 <tr class="separator:a6273431ab61ed879482885615f0e1ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -180,7 +184,26 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Remove entry from database </p>
+<p >Remove entry from database without deleteing relation</p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="a8a9b40978ebcc3e0527df4f3e99cf36d" name="a8a9b40978ebcc3e0527df4f3e99cf36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9b40978ebcc3e0527df4f3e99cf36d">&#9670;&nbsp;</a></span>deleteRelation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Core\Entity::deleteRelation </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$class</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -207,6 +230,7 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Return an instance of the entity asked </p>
 
 </div>
 </div>
@@ -233,6 +257,7 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Return all instance of the entity </p>
 
 </div>
 </div>
@@ -340,6 +365,7 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Make this object convertable to json via json_encode </p>
 
 </div>
 </div>
@@ -357,6 +383,45 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Save new entry in database or update an existing one</p>
+<dl class="section return"><dt>Returns</dt><dd>bool|int; </dd></dl>
+
+</div>
+</div>
+<a id="a947136900c5423c7968b9b568c65d2bc" name="a947136900c5423c7968b9b568c65d2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a947136900c5423c7968b9b568c65d2bc">&#9670;&nbsp;</a></span>whereLike()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Core\Entity::whereLike </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Find entity with specific field </p>
 
 </div>
 </div>
@@ -380,6 +445,7 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Orginal field of this database </p>
 
 </div>
 </div>
@@ -402,6 +468,7 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p >Name tof the current entity </p>
 
 </div>
 </div>
