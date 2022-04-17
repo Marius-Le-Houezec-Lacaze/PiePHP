@@ -1,3 +1,9 @@
+DROP DATABASE IF EXISTS my_cinema;
+
+CREATE DATABASE my_cinema;
+
+USE my_cinema;
+
 CREATE TABLE genre (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL
