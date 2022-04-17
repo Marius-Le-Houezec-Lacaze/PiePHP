@@ -3,9 +3,12 @@
     </div>
     <div class="column">
         <h1 class="title is-1">Profile:</h1>
+        <a href="/profile/edit" class="is-primary button">Edit profile</a>
+
         <form action="/profile/delete" method="post" onsubmit="return(confirm('this will erase you account permanently'))">
             <div class="control"><button type="submit" class="is-danger button">Delete Account</button></div>
         </form>
+
         <label for="" class="text is-size-5">Username:</label>
         <p class="text is-size-6">{{ $user->getName()}}</p>
         <label for="" class="text is-size-5">Bio:</label>

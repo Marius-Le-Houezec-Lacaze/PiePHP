@@ -13,6 +13,8 @@ function status_auth()
     return true;
 }
 
+Router::get('/test', ['Controller' => 'User', 'action' => 'test']);
+
 if (status_auth()) {
     Router::get('/', ['Controller' => 'Movie', 'action' => 'index']);
     Router::get('/movies', ['Controller' => 'Movie', 'action' => 'index']);
@@ -35,6 +37,7 @@ if (status_auth()) {
 
     Router::get('/profile', ['Controller' => 'User', 'action' => 'profile']);
     Router::get('/profile/edit', ['Controller' => 'User', 'action' => 'profile_edit']);
+    Router::post('/profile/edit', ['Controller' => 'User', 'action' => 'edit']);
     Router::post('/profile/delete', ['Controller' => 'User', 'action' => 'delete']);
 
     Router::post('/history/add/:id', ['Controller' => 'User', 'action' => 'add_history']);

@@ -25,15 +25,17 @@ class GenreController extends Controller
     {
         $genre = Genre::get($id);
 
-        $genre->delete();
-        
+        if($genre->deleteRelation('Movie')){
+            $genre->delete();
+        }
+    
     }
 
 
     public function edit_view($id)
     {
         $genre = Genre::get($id);
-        
+
         $this->render('edit', compact('genre'));
     }
     public function edit($id)

@@ -61,6 +61,23 @@ class TemplateEngine
         $end = "/@(.*)/";
         $echo = "/{{(.*?)}}/";
 
+        $if = "/@if\((.*)\)/";
+        $elseif = "/@if\((.*)\)/";
+
+
+        $this->_content = preg_replace_callback(
+            $if,
+            'self::if',
+            $this->_content
+        );
+
+
+        $this->_content = preg_replace_callback(
+            $elseif,
+            'self::elseif',
+            $this->_content
+        );
+
         /// {{ }}
         $this->_content = preg_replace_callback(
             $echo,
@@ -107,7 +124,7 @@ class TemplateEngine
      *
      * @return string string returned by the action handler returned here
      */
-    private function _evalPattern(array $match): string
+    private function _evalPattern(array $match)
     {
         [$full, $action, $eval] = $match;
 
@@ -121,11 +138,16 @@ class TemplateEngine
      *
      * @return string
      */
-    private function _if(string $eval): string
+    private function if(array $eval): string
     {
-        return "<? if ($eval):?>";
+        return "<? if ($eval[1]):?>";
     }
 
+
+    private function elseif(array $eval): string
+    {
+        return "<? elseif ($eval[1]):?>";
+    }
     /**
      * Replace @foreach with actual foreach statement for templating
      *
@@ -209,7 +231,6 @@ class TemplateEngine
      */
     public function __call(string $name, array $arguments)
     {
-        var_dump($name);
         //Error::templateError("Fatal templating error unknown argument $name");
     }
 }

@@ -21,7 +21,7 @@
         @else
         @foreach($genres as $genre)
         <form onsubmit="return confirm('Warning this will remove the movie related to this genre ?');" class="is-justify-content-space-between is-flex is-fullwidth" action="{{'/genre/delete/' . $genre->getId()}}" method="post" class="m-1">
-            <label> <strong>{{ $genre->getName() }}</strong> </label>
+            <label> <a href="/genre/{{ $genre->getId() }}"class="is-link">{{ $genre->getName() }}</a> </label>
 
             <div class="control"><button class="button is-light is-link is-round is-small"><i class="fa fa-times" aria-hidden="true"></i></button></div>
         </form>

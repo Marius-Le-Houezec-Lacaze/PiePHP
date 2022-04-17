@@ -70,6 +70,18 @@ class UserController extends \Core\Controller
     }
 
 
+    public function edit()
+    {
+        $data = $this->request->post();
+        $user = User::currentUser();
+
+        $user->setBio($data['bio']);
+
+        $user->setName($data['name']);
+
+        $user->save();
+    }
+
 
     public function delete()
     {
@@ -107,5 +119,16 @@ class UserController extends \Core\Controller
     private function hashPassword($password)
     {
         return password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    public function test()
+    {
+        $counts = [1, 2, 3, 4, 5, 6];
+
+        $records = ['billy', 'is', 'awesome'];
+
+        $empty = '';
+
+        $this->render('test', compact('counts', 'records', 'empty'));
     }
 }

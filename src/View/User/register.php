@@ -10,7 +10,7 @@
             </div>
             <div class="field">
                 <label for="password">Password:</label>
-                <input class="input is-normal" type="text" name="password" id="">
+                <input class="input is-normal" type="password" name="password" id="">
             </div>
 
             <div class="field">
